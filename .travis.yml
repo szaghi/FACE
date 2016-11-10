@@ -1,0 +1,71 @@
+language: generic
+
+sudo: false
+
+cache:
+  apt: true
+  pip: true
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.local
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gfortran-6
+      - binutils
+      - python-pip
+      - graphviz
+
+env:
+  global:
+    - MAKECOVERAGE="FoBiS.py rule -ex makecoverage"
+    - MAKEDOC="./scripts/makedoc.sh szaghi/FACE"
+    - CLEAN="FoBiS.py rule -ex clean"
+    - MAKETAR="FoBiS.py rule -ex maketar"
+
+before_install:
+  - git submodule update --init --recursive
+
+install:
+  - |
+    if [[ ! -d "$HOME/.local/bin" ]]; then
+      mkdir "$HOME/.local/bin"
+    fi
+  - export PATH="$HOME/.local/bin:$PATH"
+  - export FC=/usr/bin/gfortran-6
+  - ln -fs /usr/bin/gfortran-6 "$HOME/.local/bin/gfortran" && gfortran --version
+  - ls -l /usr/bin/gfortran-6
+  - ln -fs /usr/bin/gcov-6 "$HOME/.local/bin/gcov" && gcov --version
+  - pip install --user --upgrade pygooglechart
+  - pip install --user --upgrade graphviz
+  - pip install --user --upgrade FoBiS.py
+  - pip install --user --upgrade markdown-checklist 
+  - pip install --user --upgrade ford
+
+script:
+  - $MAKECOVERAGE
+
+after_success:
+  - find . -name '*.gcno' -print
+  - bash <(curl -s https://codecov.io/bash)
+  - $MAKEDOC
+
+before_deploy:
+  - $CLEAN
+  - $MAKETAR
+  - mv FACE.tar.gz FACE-$TRAVIS_TAG.tar.gz
+
+deploy:
+  provider: releases
+  api_key:
+    # secure: MqRf9dWvZak0yEzTUcrf/tlfWztVLJe1OImUZBHfJLWE3GjtM8VLv50otNOyb+JNUYfV8e86F5Tzouxxp5xD54RhDhSKnG3f2RSpVJ3BwTewIXsJEYlV14Ec1xlKCLkg6EEZg1Fn/eZDLonjicm1whTP9GJb3GCWL9X1y6mPCt0=
+  file: 
+    - FACE-$TRAVIS_TAG.tar.gz
+    - ./scripts/install.sh
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true
