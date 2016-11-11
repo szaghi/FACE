@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Fortran Ansi Colors (and Styles) Environment">
+    
+    <meta name="author" content="Stefano Zaghi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>face.f90 &ndash; FACE</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FACE </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>face.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="62.4% of total for source files.">93 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/face.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li class="active">face.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/face.html">face</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/face.f90.html#src">face.f90</a>
+  </div>
+</div>
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/face.f90.html">face.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_basic.f90.html">face_test_basic.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_colors.f90.html">face_test_colors.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_styles.f90.html">face_test_styles.f90</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    <div class="col-md-9" id='text'>
+    <p>FACE, Fortran Ansi Colors Environment</p>
+    
+      
+      <h3>Files Dependent On This One</h3>
+      
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: sourcefile~~face.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilefacef90AfferentGraph" width="208pt" height="122pt"
+ viewBox="0.00 0.00 208.00 122.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~face.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 118)">
+<title>sourcefile~~face.f90~~AfferentGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-118 205,-118 205,5 -4,5"/>
+<!-- sourcefile~face.f90 -->
+<g id="node1" class="node"><title>sourcefile~face.f90</title>
+<polygon fill="none" stroke="black" points="54,-70 2.13163e-14,-70 0,-44 54,-44 54,-70"/>
+<text text-anchor="middle" x="27" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50">face.f90</text>
+</g>
+<!-- sourcefile~face_test_basic.f90 -->
+<g id="node2" class="node"><title>sourcefile~face_test_basic.f90</title>
+<a xlink:href="../sourcefile/face_test_basic.f90.html" xlink:title="face_test_basic.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="197,-114 93,-114 93,-88 197,-88 197,-114"/>
+<text text-anchor="middle" x="145" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_basic.f90</text>
+</a>
+</g>
+<!-- sourcefile~face.f90&#45;&gt;sourcefile~face_test_basic.f90 -->
+<g id="edge2" class="edge"><title>sourcefile~face.f90&#45;&gt;sourcefile~face_test_basic.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M54.0716,-67.0945C67.8204,-72.2212 84.8794,-78.5821 100.494,-84.4047"/>
+<polygon fill="#000000" stroke="#000000" points="99.3952,-87.7302 109.988,-87.9446 101.841,-81.1713 99.3952,-87.7302"/>
+</g>
+<!-- sourcefile~face_test_styles.f90 -->
+<g id="node3" class="node"><title>sourcefile~face_test_styles.f90</title>
+<a xlink:href="../sourcefile/face_test_styles.f90.html" xlink:title="face_test_styles.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="198,-70 92,-70 92,-44 198,-44 198,-70"/>
+<text text-anchor="middle" x="145" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_styles.f90</text>
+</a>
+</g>
+<!-- sourcefile~face.f90&#45;&gt;sourcefile~face_test_styles.f90 -->
+<g id="edge4" class="edge"><title>sourcefile~face.f90&#45;&gt;sourcefile~face_test_styles.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M54.0716,-57C62.1665,-57 71.4089,-57 80.8284,-57"/>
+<polygon fill="#000000" stroke="#000000" points="81.0733,-60.5001 91.0733,-57 81.0733,-53.5001 81.0733,-60.5001"/>
+</g>
+<!-- sourcefile~face_test_colors.f90 -->
+<g id="node4" class="node"><title>sourcefile~face_test_colors.f90</title>
+<a xlink:href="../sourcefile/face_test_colors.f90.html" xlink:title="face_test_colors.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="199,-26 91,-26 91,-1.24345e-14 199,-3.55271e-15 199,-26"/>
+<text text-anchor="middle" x="145" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_colors.f90</text>
+</a>
+</g>
+<!-- sourcefile~face.f90&#45;&gt;sourcefile~face_test_colors.f90 -->
+<g id="edge6" class="edge"><title>sourcefile~face.f90&#45;&gt;sourcefile~face_test_colors.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M54.0716,-46.9055C67.8204,-41.7788 84.8794,-35.4179 100.494,-29.5953"/>
+<polygon fill="#000000" stroke="#000000" points="101.841,-32.8287 109.988,-26.0554 99.3952,-26.2698 101.841,-32.8287"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="188pt" height="34pt"
+ viewBox="0.00 0.00 188.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 185,-30 185,5 -4,5"/>
+<!-- Source File -->
+<g id="node1" class="node"><title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="66,-26 2.84217e-14,-26 0,-1.24345e-14 66,-3.55271e-15 66,-26"/>
+<text text-anchor="middle" x="33" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="180,-26 84,-26 84,-1.24345e-14 180,-3.55271e-15 180,-26"/>
+<text text-anchor="middle" x="132" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    is dependent upon another if the latter must be compiled before the former
+    can be.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/face.html">face</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/face.f90.html#src">face.f90</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!&lt; FACE, Fortran Ansi Colors Environment</span>
+<a name="ln-2"></a><span class="k">module </span><span class="n">face</span>
+<a name="ln-3"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-4"></a><span class="c">!&lt; FACE, Fortran Ansi Colors Environment</span>
+<a name="ln-5"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-6"></a><span class="k">use</span><span class="p">,</span> <span class="k">intrinsic</span> <span class="kd">::</span> <span class="n">iso_fortran_env</span>
+<a name="ln-7"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-10"></a><span class="k">implicit none</span>
+<a name="ln-11"></a><span class="k">private</span>
+<a name="ln-12"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">colorize</span>
+<a name="ln-13"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">colors_samples</span>
+<a name="ln-14"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">styles_samples</span>
+<a name="ln-15"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-16"></a>
+<a name="ln-17"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-18"></a><span class="c">! parameters</span>
+<a name="ln-19"></a><span class="kt">character</span><span class="p">(</span><span class="mi">26</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">UPPER_ALPHABET</span><span class="o">=</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span> <span class="c">!&lt; Upper case alphabet.</span>
+<a name="ln-20"></a><span class="kt">character</span><span class="p">(</span><span class="mi">26</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">LOWER_ALPHABET</span><span class="o">=</span><span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span> <span class="c">!&lt; Lower case alphabet.</span>
+<a name="ln-21"></a><span class="kt">character</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>  <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NL</span><span class="o">=</span><span class="nb">new_line</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>                            <span class="c">!&lt; New line character.</span>
+<a name="ln-22"></a><span class="kt">character</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>  <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ESCAPE</span><span class="o">=</span><span class="nb">achar</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>                            <span class="c">!&lt; &quot;\&quot; character.</span>
+<a name="ln-23"></a><span class="c">! codes</span>
+<a name="ln-24"></a><span class="kt">character</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">CODE_START</span><span class="o">=</span><span class="n">ESCAPE</span><span class="o">//</span><span class="s1">&#39;[&#39;</span>               <span class="c">!&lt; Start ansi code, &quot;\[&quot;.</span>
+<a name="ln-25"></a><span class="kt">character</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">CODE_END</span><span class="o">=</span><span class="s1">&#39;m&#39;</span>                         <span class="c">!&lt; End ansi code, &quot;m&quot;.</span>
+<a name="ln-26"></a><span class="kt">character</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">CODE_CLEAR</span><span class="o">=</span><span class="n">CODE_START</span><span class="o">//</span><span class="s1">&#39;0&#39;</span><span class="o">//</span><span class="n">CODE_END</span> <span class="c">!&lt; Clear all styles, &quot;\[0m&quot;.</span>
+<a name="ln-27"></a><span class="c">! styles codes</span>
+<a name="ln-28"></a><span class="kt">character</span><span class="p">(</span><span class="mi">17</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">)</span><span class="o">=</span><span class="nb">reshape</span><span class="p">([&amp;</span>
+<a name="ln-29"></a>             <span class="s1">&#39;BOLD_ON          &#39;</span><span class="p">,</span><span class="s1">&#39;1                &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Bold on.</span>
+<a name="ln-30"></a>             <span class="s1">&#39;ITALICS_ON       &#39;</span><span class="p">,</span><span class="s1">&#39;3                &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Italics on.</span>
+<a name="ln-31"></a>             <span class="s1">&#39;UNDERLINE_ON     &#39;</span><span class="p">,</span><span class="s1">&#39;4                &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Underline on.</span>
+<a name="ln-32"></a>             <span class="s1">&#39;INVERSE_ON       &#39;</span><span class="p">,</span><span class="s1">&#39;7                &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Inverse on: reverse foreground and background colors.</span>
+<a name="ln-33"></a>             <span class="s1">&#39;STRIKETHROUGH_ON &#39;</span><span class="p">,</span><span class="s1">&#39;9                &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Strikethrough on.</span>
+<a name="ln-34"></a>             <span class="s1">&#39;BOLD_OFF         &#39;</span><span class="p">,</span><span class="s1">&#39;22               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Bold off.</span>
+<a name="ln-35"></a>             <span class="s1">&#39;ITALICS_OFF      &#39;</span><span class="p">,</span><span class="s1">&#39;23               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Italics off.</span>
+<a name="ln-36"></a>             <span class="s1">&#39;UNDERLINE_OFF    &#39;</span><span class="p">,</span><span class="s1">&#39;24               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Underline off.</span>
+<a name="ln-37"></a>             <span class="s1">&#39;INVERSE_OFF      &#39;</span><span class="p">,</span><span class="s1">&#39;27               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Inverse off: reverse foreground and background colors.</span>
+<a name="ln-38"></a>             <span class="s1">&#39;STRIKETHROUGH_OFF&#39;</span><span class="p">,</span><span class="s1">&#39;29               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Strikethrough off.</span>
+<a name="ln-39"></a>             <span class="s1">&#39;FRAMED_ON        &#39;</span><span class="p">,</span><span class="s1">&#39;51               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Framed on.</span>
+<a name="ln-40"></a>             <span class="s1">&#39;ENCIRCLED_ON     &#39;</span><span class="p">,</span><span class="s1">&#39;52               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Encircled on.</span>
+<a name="ln-41"></a>             <span class="s1">&#39;OVERLINED_ON     &#39;</span><span class="p">,</span><span class="s1">&#39;53               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Overlined on.</span>
+<a name="ln-42"></a>             <span class="s1">&#39;FRAMED_OFF       &#39;</span><span class="p">,</span><span class="s1">&#39;54               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Framed off.</span>
+<a name="ln-43"></a>             <span class="s1">&#39;ENCIRCLED_OFF    &#39;</span><span class="p">,</span><span class="s1">&#39;54               &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Encircled off.</span>
+<a name="ln-44"></a>             <span class="s1">&#39;OVERLINED_OFF    &#39;</span><span class="p">,</span><span class="s1">&#39;55               &#39;</span>  <span class="p">&amp;</span>         <span class="c">!  Overlined off.</span>
+<a name="ln-45"></a>                                                     <span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">])</span> <span class="c">!&lt; Styles.</span>
+<a name="ln-46"></a><span class="c">! colors codes</span>
+<a name="ln-47"></a><span class="kt">character</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">17</span><span class="p">)</span><span class="o">=</span><span class="nb">reshape</span><span class="p">([&amp;</span>
+<a name="ln-48"></a>                    <span class="s1">&#39;BLACK          &#39;</span><span class="p">,</span><span class="s1">&#39;30             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Black.</span>
+<a name="ln-49"></a>                    <span class="s1">&#39;RED            &#39;</span><span class="p">,</span><span class="s1">&#39;31             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Red.</span>
+<a name="ln-50"></a>                    <span class="s1">&#39;GREEN          &#39;</span><span class="p">,</span><span class="s1">&#39;32             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Green.</span>
+<a name="ln-51"></a>                    <span class="s1">&#39;YELLOW         &#39;</span><span class="p">,</span><span class="s1">&#39;33             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Yellow.</span>
+<a name="ln-52"></a>                    <span class="s1">&#39;BLUE           &#39;</span><span class="p">,</span><span class="s1">&#39;34             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Blue.</span>
+<a name="ln-53"></a>                    <span class="s1">&#39;MAGENTA        &#39;</span><span class="p">,</span><span class="s1">&#39;35             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Magenta.</span>
+<a name="ln-54"></a>                    <span class="s1">&#39;CYAN           &#39;</span><span class="p">,</span><span class="s1">&#39;36             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Cyan.</span>
+<a name="ln-55"></a>                    <span class="s1">&#39;WHITE          &#39;</span><span class="p">,</span><span class="s1">&#39;37             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  White.</span>
+<a name="ln-56"></a>                    <span class="s1">&#39;DEFAULT        &#39;</span><span class="p">,</span><span class="s1">&#39;39             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Default (white).</span>
+<a name="ln-57"></a>                    <span class="s1">&#39;BLACK_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;90             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Black intense.</span>
+<a name="ln-58"></a>                    <span class="s1">&#39;RED_INTENSE    &#39;</span><span class="p">,</span><span class="s1">&#39;91             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Red intense.</span>
+<a name="ln-59"></a>                    <span class="s1">&#39;GREEN_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;92             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Green intense.</span>
+<a name="ln-60"></a>                    <span class="s1">&#39;YELLOW_INTENSE &#39;</span><span class="p">,</span><span class="s1">&#39;93             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Yellow intense.</span>
+<a name="ln-61"></a>                    <span class="s1">&#39;BLUE_INTENSE   &#39;</span><span class="p">,</span><span class="s1">&#39;94             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Blue intense.</span>
+<a name="ln-62"></a>                    <span class="s1">&#39;MAGENTA_INTENSE&#39;</span><span class="p">,</span><span class="s1">&#39;95             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Magenta intense.</span>
+<a name="ln-63"></a>                    <span class="s1">&#39;CYAN_INTENSE   &#39;</span><span class="p">,</span><span class="s1">&#39;96             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Cyan intense.</span>
+<a name="ln-64"></a>                    <span class="s1">&#39;WHITE_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;97             &#39;</span>  <span class="p">&amp;</span>         <span class="c">!  White intense.</span>
+<a name="ln-65"></a>                                                        <span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">17</span><span class="p">])</span> <span class="c">!&lt; Foreground colors.</span>
+<a name="ln-66"></a><span class="kt">character</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">17</span><span class="p">)</span><span class="o">=</span><span class="nb">reshape</span><span class="p">([&amp;</span>
+<a name="ln-67"></a>                    <span class="s1">&#39;BLACK          &#39;</span><span class="p">,</span><span class="s1">&#39;40             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Black.</span>
+<a name="ln-68"></a>                    <span class="s1">&#39;RED            &#39;</span><span class="p">,</span><span class="s1">&#39;41             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Red.</span>
+<a name="ln-69"></a>                    <span class="s1">&#39;GREEN          &#39;</span><span class="p">,</span><span class="s1">&#39;42             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Green.</span>
+<a name="ln-70"></a>                    <span class="s1">&#39;YELLOW         &#39;</span><span class="p">,</span><span class="s1">&#39;43             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Yellow.</span>
+<a name="ln-71"></a>                    <span class="s1">&#39;BLUE           &#39;</span><span class="p">,</span><span class="s1">&#39;44             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Blue.</span>
+<a name="ln-72"></a>                    <span class="s1">&#39;MAGENTA        &#39;</span><span class="p">,</span><span class="s1">&#39;45             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Magenta.</span>
+<a name="ln-73"></a>                    <span class="s1">&#39;CYAN           &#39;</span><span class="p">,</span><span class="s1">&#39;46             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Cyan.</span>
+<a name="ln-74"></a>                    <span class="s1">&#39;WHITE          &#39;</span><span class="p">,</span><span class="s1">&#39;47             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  White.</span>
+<a name="ln-75"></a>                    <span class="s1">&#39;DEFAULT        &#39;</span><span class="p">,</span><span class="s1">&#39;49             &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Default (black).</span>
+<a name="ln-76"></a>                    <span class="s1">&#39;BLACK_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;100            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Black intense.</span>
+<a name="ln-77"></a>                    <span class="s1">&#39;RED_INTENSE    &#39;</span><span class="p">,</span><span class="s1">&#39;101            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Red intense.</span>
+<a name="ln-78"></a>                    <span class="s1">&#39;GREEN_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;102            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Green intense.</span>
+<a name="ln-79"></a>                    <span class="s1">&#39;YELLOW_INTENSE &#39;</span><span class="p">,</span><span class="s1">&#39;103            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Yellow intense.</span>
+<a name="ln-80"></a>                    <span class="s1">&#39;BLUE_INTENSE   &#39;</span><span class="p">,</span><span class="s1">&#39;104            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Blue intense.</span>
+<a name="ln-81"></a>                    <span class="s1">&#39;MAGENTA_INTENSE&#39;</span><span class="p">,</span><span class="s1">&#39;105            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Magenta intense.</span>
+<a name="ln-82"></a>                    <span class="s1">&#39;CYAN_INTENSE   &#39;</span><span class="p">,</span><span class="s1">&#39;106            &#39;</span><span class="p">,</span> <span class="p">&amp;</span>         <span class="c">!  Cyan intense.</span>
+<a name="ln-83"></a>                    <span class="s1">&#39;WHITE_INTENSE  &#39;</span><span class="p">,</span><span class="s1">&#39;107            &#39;</span>  <span class="p">&amp;</span>         <span class="c">!  White intense.</span>
+<a name="ln-84"></a>                                                        <span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">17</span><span class="p">])</span> <span class="c">!&lt; Background colors.</span>
+<a name="ln-85"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-86"></a><span class="k">contains</span>
+<a name="ln-87"></a>  <span class="c">! public methods</span>
+<a name="ln-88"></a>  <span class="k">pure function </span><span class="n">colorize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">color_fg</span><span class="p">,</span> <span class="n">color_bg</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">colorized</span><span class="p">)</span>
+<a name="ln-89"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-90"></a>  <span class="c">!&lt; Colorize and stylize strings.</span>
+<a name="ln-91"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-92"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>           <span class="kd">::</span> <span class="n">string</span>    <span class="c">!&lt; Input string.</span>
+<a name="ln-93"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">color_fg</span>  <span class="c">!&lt; Foreground color definition.</span>
+<a name="ln-94"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">color_bg</span>  <span class="c">!&lt; Background color definition.</span>
+<a name="ln-95"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">style</span>     <span class="c">!&lt; Style definition.</span>
+<a name="ln-96"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span>          <span class="kd">::</span> <span class="n">colorized</span> <span class="c">!&lt; Colorized string.</span>
+<a name="ln-97"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span>                         <span class="kd">::</span> <span class="n">i</span>         <span class="c">!&lt; Counter.</span>
+<a name="ln-98"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-99"></a>
+<a name="ln-100"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-101"></a>  <span class="n">colorized</span> <span class="o">=</span> <span class="n">string</span>
+<a name="ln-102"></a>  <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">color_fg</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-103"></a><span class="k">    </span><span class="n">i</span> <span class="o">=</span> <span class="n">color_index</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">color_fg</span><span class="p">))</span>
+<a name="ln-104"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">colorized</span> <span class="o">=</span> <span class="n">CODE_START</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">//</span><span class="n">CODE_END</span><span class="o">//</span><span class="n">colorized</span><span class="o">//</span><span class="n">CODE_CLEAR</span>
+<a name="ln-105"></a>  <span class="n">endif</span>
+<a name="ln-106"></a>  <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">color_bg</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-107"></a><span class="k">    </span><span class="n">i</span> <span class="o">=</span> <span class="n">color_index</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">color_bg</span><span class="p">))</span>
+<a name="ln-108"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">colorized</span> <span class="o">=</span> <span class="n">CODE_START</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">//</span><span class="n">CODE_END</span><span class="o">//</span><span class="n">colorized</span><span class="o">//</span><span class="n">CODE_CLEAR</span>
+<a name="ln-109"></a>  <span class="n">endif</span>
+<a name="ln-110"></a>  <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">style</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-111"></a><span class="k">    </span><span class="n">i</span> <span class="o">=</span> <span class="n">style_index</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">style</span><span class="p">))</span>
+<a name="ln-112"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">colorized</span> <span class="o">=</span> <span class="n">CODE_START</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">//</span><span class="n">CODE_END</span><span class="o">//</span><span class="n">colorized</span><span class="o">//</span><span class="n">CODE_CLEAR</span>
+<a name="ln-113"></a>  <span class="n">endif</span>
+<a name="ln-114"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-115"></a>  <span class="n">endfunction</span> <span class="n">colorize</span>
+<a name="ln-116"></a>
+<a name="ln-117"></a>  <span class="k">subroutine </span><span class="n">colors_samples</span><span class="p">()</span>
+<a name="ln-118"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-119"></a>  <span class="c">!&lt; Print to standard output all colors samples.</span>
+<a name="ln-120"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-121"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span> <span class="c">!&lt; Counter.</span>
+<a name="ln-122"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-123"></a>
+<a name="ln-124"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-125"></a>  <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Foreground colors samples&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red_intense&#39;</span><span class="p">)</span>
+<a name="ln-126"></a>  <span class="k">do </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">,</span> <span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-127"></a>    <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;  colorize(&quot;&#39;</span><span class="o">//</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;, color_fg=&quot;&#39;</span><span class="o">//</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;) =&gt; &#39;</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-128"></a>      <span class="n">colorize</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">color_fg</span><span class="o">=</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-129"></a>      <span class="s1">&#39; code: &#39;</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="p">)),</span> <span class="n">color_fg</span><span class="o">=</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;inverse_on&#39;</span><span class="p">)</span>
+<a name="ln-130"></a>  <span class="n">enddo</span>
+<a name="ln-131"></a>  <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Background colors samples&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red_intense&#39;</span><span class="p">)</span>
+<a name="ln-132"></a>  <span class="k">do </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">COLORS_BG</span><span class="p">,</span> <span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-133"></a>    <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;  colorize(&quot;&#39;</span><span class="o">//</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;, color_bg=&quot;&#39;</span><span class="o">//</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;) =&gt; &#39;</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-134"></a>      <span class="n">colorize</span><span class="p">(</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">color_bg</span><span class="o">=</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-135"></a>      <span class="s1">&#39; code: &#39;</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="p">)),</span> <span class="n">color_bg</span><span class="o">=</span><span class="n">COLORS_BG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;inverse_on&#39;</span><span class="p">)</span>
+<a name="ln-136"></a>  <span class="n">enddo</span>
+<a name="ln-137"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-138"></a>  <span class="n">endsubroutine</span> <span class="n">colors_samples</span>
+<a name="ln-139"></a>
+<a name="ln-140"></a>  <span class="k">subroutine </span><span class="n">styles_samples</span><span class="p">()</span>
+<a name="ln-141"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-142"></a>  <span class="c">!&lt; Print to standard output all styles samples.</span>
+<a name="ln-143"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-144"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span> <span class="kd">::</span> <span class="n">s</span> <span class="c">!&lt; Counter.</span>
+<a name="ln-145"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-146"></a>
+<a name="ln-147"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-148"></a>  <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Styles samples&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red_intense&#39;</span><span class="p">)</span>
+<a name="ln-149"></a>  <span class="k">do </span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">STYLES</span><span class="p">,</span> <span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-150"></a>    <span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;  colorize(&quot;&#39;</span><span class="o">//</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;, style=&quot;&#39;</span><span class="o">//</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39;&quot;) =&gt; &#39;</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-151"></a>      <span class="n">colorize</span><span class="p">(</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span><span class="o">//</span><span class="p">&amp;</span>
+<a name="ln-152"></a>      <span class="s1">&#39; code: &#39;</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="p">)),</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;magenta&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;inverse_on&#39;</span><span class="p">)</span>
+<a name="ln-153"></a>  <span class="n">enddo</span>
+<a name="ln-154"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-155"></a>  <span class="n">endsubroutine</span> <span class="n">styles_samples</span>
+<a name="ln-156"></a>
+<a name="ln-157"></a>  <span class="c">! private methods</span>
+<a name="ln-158"></a>  <span class="k">elemental function </span><span class="n">color_index</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<a name="ln-159"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-160"></a>  <span class="c">!&lt; Return the array-index corresponding to the queried color.</span>
+<a name="ln-161"></a>  <span class="c">!&lt;</span>
+<a name="ln-162"></a>  <span class="c">!&lt; @note Because Foreground and backround colors lists share the same name, no matter what array is used to find the color index.</span>
+<a name="ln-163"></a>  <span class="c">!&lt; Thus, the foreground array is used.</span>
+<a name="ln-164"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-165"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">color</span>       <span class="c">!&lt; Color definition.</span>
+<a name="ln-166"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">color_index</span> <span class="c">!&lt; Index into the colors arrays.</span>
+<a name="ln-167"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">c</span>           <span class="c">!&lt; Counter.</span>
+<a name="ln-168"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-171"></a>  <span class="n">color_index</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-172"></a>  <span class="k">do </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">,</span> <span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-173"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span><span class="o">==</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">color</span><span class="p">)))</span> <span class="k">then</span>
+<a name="ln-174"></a><span class="k">      </span><span class="n">color_index</span> <span class="o">=</span> <span class="n">c</span>
+<a name="ln-175"></a>      <span class="k">exit</span>
+<a name="ln-176"></a><span class="k">    </span><span class="n">endif</span>
+<a name="ln-177"></a>  <span class="n">enddo</span>
+<a name="ln-178"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-179"></a>  <span class="n">endfunction</span> <span class="n">color_index</span>
+<a name="ln-180"></a>
+<a name="ln-181"></a>  <span class="k">elemental function </span><span class="n">style_index</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+<a name="ln-182"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-183"></a>  <span class="c">!&lt; Return the array-index corresponding to the queried style.</span>
+<a name="ln-184"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-185"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">style</span>       <span class="c">!&lt; Style definition.</span>
+<a name="ln-186"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">style_index</span> <span class="c">!&lt; Index into the styles array.</span>
+<a name="ln-187"></a>  <span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">s</span>           <span class="c">!&lt; Counter.</span>
+<a name="ln-188"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-189"></a>
+<a name="ln-190"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-191"></a>  <span class="n">style_index</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-192"></a>  <span class="k">do </span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">STYLES</span><span class="p">,</span> <span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-193"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">STYLES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span><span class="o">==</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">style</span><span class="p">)))</span> <span class="k">then</span>
+<a name="ln-194"></a><span class="k">      </span><span class="n">style_index</span> <span class="o">=</span> <span class="n">s</span>
+<a name="ln-195"></a>      <span class="k">exit</span>
+<a name="ln-196"></a><span class="k">    </span><span class="n">endif</span>
+<a name="ln-197"></a>  <span class="n">enddo</span>
+<a name="ln-198"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-199"></a>  <span class="n">endfunction</span> <span class="n">style_index</span>
+<a name="ln-200"></a>
+<a name="ln-201"></a>  <span class="k">elemental function </span><span class="n">upper</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<a name="ln-202"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-203"></a>  <span class="c">!&lt; Return a string with all uppercase characters.</span>
+<a name="ln-204"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-205"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">string</span> <span class="c">!&lt; Input string.</span>
+<a name="ln-206"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>   <span class="kd">::</span> <span class="n">upper</span>  <span class="c">!&lt; Upper case string.</span>
+<a name="ln-207"></a>  <span class="kt">integer</span>                      <span class="kd">::</span> <span class="n">n1</span>     <span class="c">!&lt; Characters counter.</span>
+<a name="ln-208"></a>  <span class="kt">integer</span>                      <span class="kd">::</span> <span class="n">n2</span>     <span class="c">!&lt; Characters counter.</span>
+<a name="ln-209"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-212"></a>  <span class="n">upper</span> <span class="o">=</span> <span class="n">string</span>
+<a name="ln-213"></a>  <span class="k">do </span><span class="n">n1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<a name="ln-214"></a>    <span class="n">n2</span> <span class="o">=</span> <span class="nb">index</span><span class="p">(</span><span class="n">LOWER_ALPHABET</span><span class="p">,</span> <span class="n">string</span><span class="p">(</span><span class="n">n1</span><span class="p">:</span><span class="n">n1</span><span class="p">))</span>
+<a name="ln-215"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">n2</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">upper</span><span class="p">(</span><span class="n">n1</span><span class="p">:</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">UPPER_ALPHABET</span><span class="p">(</span><span class="n">n2</span><span class="p">:</span><span class="n">n2</span><span class="p">)</span>
+<a name="ln-216"></a>  <span class="n">enddo</span>
+<a name="ln-217"></a>  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+<a name="ln-218"></a>  <span class="n">endfunction</span> <span class="n">upper</span>
+<a name="ln-219"></a><span class="n">endmodule</span> <span class="n">face</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/face.f90.html">face.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_basic.f90.html">face_test_basic.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_colors.f90.html">face_test_colors.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/face_test_styles.f90.html">face_test_styles.f90</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2016 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> FACE was developed by Stefano Zaghi</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
