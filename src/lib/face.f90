@@ -122,13 +122,17 @@ contains
   !---------------------------------------------------------------------------------------------------------------------------------
 
   !---------------------------------------------------------------------------------------------------------------------------------
-  print '(A)', 'Foreground colors samples'
+  print '(A)', colorize('Foreground colors samples', color_fg='red_intense')
   do c=1, size(COLORS_FG, dim=2)
-    print '(A)', '  '//colorize(COLORS_FG(1, c), color_fg=COLORS_FG(1, c))
+    print '(A)', '  colorize("'//COLORS_FG(1, c)//'", color_fg="'//COLORS_FG(1, c)//'") => '//&
+      colorize(COLORS_FG(1, c), color_fg=COLORS_FG(1, c))//&
+      ' code: '//colorize(trim(COLORS_FG(2, c)), color_fg=COLORS_FG(1, c), style='inverse_on')
   enddo
-  print '(A)', 'Background colors samples'
+  print '(A)', colorize('Background colors samples', color_fg='red_intense')
   do c=1, size(COLORS_BG, dim=2)
-    print '(A)', '  '//colorize(COLORS_BG(1, c), color_bg=COLORS_BG(1, c))
+    print '(A)', '  colorize("'//COLORS_BG(1, c)//'", color_bg="'//COLORS_BG(1, c)//'") => '//&
+      colorize(COLORS_BG(1, c), color_bg=COLORS_BG(1, c))//&
+      ' code: '//colorize(trim(COLORS_BG(2, c)), color_bg=COLORS_BG(1, c), style='inverse_on')
   enddo
   !---------------------------------------------------------------------------------------------------------------------------------
   endsubroutine colors_samples
@@ -141,9 +145,11 @@ contains
   !---------------------------------------------------------------------------------------------------------------------------------
 
   !---------------------------------------------------------------------------------------------------------------------------------
-  print '(A)', 'Styles samples'
+  print '(A)', colorize('Styles samples', color_fg='red_intense')
   do s=1, size(STYLES, dim=2)
-    print '(A)', '  '//colorize(STYLES(1, s), style=STYLES(1, s))
+    print '(A)', '  colorize("'//STYLES(1, s)//'", style="'//STYLES(1, s)//'") => '//&
+      colorize(STYLES(1, s), style=STYLES(1, s))//&
+      ' code: '//colorize(trim(STYLES(2, s)), color_fg='magenta', style='inverse_on')
   enddo
   !---------------------------------------------------------------------------------------------------------------------------------
   endsubroutine styles_samples

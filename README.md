@@ -100,53 +100,37 @@ character(len=:), allocatable :: error_message
 error_message = colorize('error:', color_fg='red', style='underline_on')//' file not found!'
 
 print '(A)', error_message
-print '(A)', colorize('check you configuration', color_fg='blue')
+print '(A)', colorize('suggestion: check you configuration', color_fg='blue')
 
 call colors_samples ! print samples of all colors available
 call styles_samples ! print samples of all styles available
 ```
 
+#### Colorize
+
+`colorize` is the main function used to colorize and stylize the input string. Its signature is:
+
+```fortran
+pure function colorize(string, color_fg, color_bg, style) result(colorized)
+  character(len=*), intent(in)           :: string    ! Input string.
+  character(len=*), intent(in), optional :: color_fg  ! Foreground color definition.
+  character(len=*), intent(in), optional :: color_bg  ! Background color definition.
+  character(len=*), intent(in), optional :: style     ! Style definition.
+  character(len=:), allocatable          :: colorized ! Colorized string.
+end function colorize
+```
+
++ `string` is the input string;
++ `color_fg` is the foreground color definition and it is optional;
++ `color_bg` is the background color definition and it is optional;
++ `style` is the style definition and it is optional;
+
+> + colors and style definitions are case **insensitive**;
+> + no warning is returned if the colors or style definitions are wrong (or not available): in case the color or style are simply not applied.
+
 ### Available Colors and Styles
 
-<table>
-  <tr> <td rowspan="37"> <img src="doc/samples.png"></td> </tr>
-  <tr> <td> <sub><b>FOREGROUND colors</b></sub>     </td><td><sub><b>STYLES</b>    </sub></td> </tr>
-  <tr> <td> <sub>black                   </sub>     </td><td><sub>bold_on          </sub></td> </tr>
-  <tr> <td> <sub>red                     </sub>     </td><td><sub>italics_on       </sub></td> </tr>
-  <tr> <td> <sub>green                   </sub>     </td><td><sub>underline_on     </sub></td> </tr>
-  <tr> <td> <sub>yellow                  </sub>     </td><td><sub>inverse_on       </sub></td> </tr>
-  <tr> <td> <sub>blue                    </sub>     </td><td><sub>strikethrough_on </sub></td> </tr>
-  <tr> <td> <sub>magenta                 </sub>     </td><td><sub>bold_off         </sub></td> </tr>
-  <tr> <td> <sub>cyan                    </sub>     </td><td><sub>italics_off      </sub></td> </tr>
-  <tr> <td> <sub>white                   </sub>     </td><td><sub>underline_off    </sub></td> </tr>
-  <tr> <td> <sub>default                 </sub>     </td><td><sub>inverse_off      </sub></td> </tr>
-  <tr> <td> <sub>black_intense           </sub>     </td><td><sub>strikethrough_off</sub></td> </tr>
-  <tr> <td> <sub>red_intense             </sub>     </td><td><sub>framed_on        </sub></td> </tr>
-  <tr> <td> <sub>green_intense           </sub>     </td><td><sub>encircled_on     </sub></td> </tr>
-  <tr> <td> <sub>yellow_intense          </sub>     </td><td><sub>overlined_on     </sub></td> </tr>
-  <tr> <td> <sub>blue_intense            </sub>     </td><td><sub>framed_off       </sub></td> </tr>
-  <tr> <td> <sub>magenta_intense         </sub>     </td><td><sub>encircled_off    </sub></td> </tr>
-  <tr> <td> <sub>cyan_intense            </sub>     </td><td><sub>overlined_off    </sub></td> </tr>
-  <tr> <td> <sub>white_intense           </sub>     </td> </tr>
-  <tr> <td> <sub><b>BACKGROUND colors</b></sub>     </td> </tr>
-  <tr> <td> <sub>black                   </sub>     </td> </tr>
-  <tr> <td> <sub>red                     </sub>     </td> </tr>
-  <tr> <td> <sub>green                   </sub>     </td> </tr>
-  <tr> <td> <sub>yellow                  </sub>     </td> </tr>
-  <tr> <td> <sub>blue                    </sub>     </td> </tr>
-  <tr> <td> <sub>magenta                 </sub>     </td> </tr>
-  <tr> <td> <sub>cyan                    </sub>     </td> </tr>
-  <tr> <td> <sub>white                   </sub>     </td> </tr>
-  <tr> <td> <sub>default                 </sub>     </td> </tr>
-  <tr> <td> <sub>black_intense           </sub>     </td> </tr>
-  <tr> <td> <sub>red_intense             </sub>     </td> </tr>
-  <tr> <td> <sub>green_intense           </sub>     </td> </tr>
-  <tr> <td> <sub>yellow_intense          </sub>     </td> </tr>
-  <tr> <td> <sub>blue_intense            </sub>     </td> </tr>
-  <tr> <td> <sub>magenta_intense         </sub>     </td> </tr>
-  <tr> <td> <sub>cyan_intense            </sub>     </td> </tr>
-  <tr> <td> <sub>white_intense           </sub>     </td> </tr>
-</table>
+![samples](doc/samples.png)
 
 Go to [Top](#top)
 
