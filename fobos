@@ -141,10 +141,29 @@ preproc         =
 
 # rules
 [rule-makedoc]
-help   = Rule for building documentation from source files
+help   = Build documentation from source files
 rule_1 = rm -rf doc/html/*
 rule_2 = ford doc/main_page.md --debug
 rule_3 = cp -r doc/html/publish/* doc/html/
+rule_4 = rm -rf doc/html/publish
+
+[rule-deldoc]
+help = Delete documentation
+rule = rm -rf doc/html/*
+
+[rule-delexe]
+help = Delete exes
+rule = rm -rf exe/
+
+[rule-clean]
+help = Clean the project tree
+rule_1 = FoBiS.py rule -ex deldoc
+rule_2 = FoBiS.py rule -ex delexe
+rule_3 = rm -f *.gcov
+
+[rule-maketar]
+help = Make tar archive of the project
+rule = tar --xform="s%^%FACE/%" -czf FACE.tar.gz *
 
 [rule-makecoverage]
 help   = Rule for performing coverage analysis
