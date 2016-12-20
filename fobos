@@ -40,7 +40,7 @@ output    = libface.a
 mklib     = static
 
 [face-shared-gnu]
-template  = template-static-gnu
+template  = template-shared-gnu
 build_dir = lib
 target    = face.f90
 output    = libface.so
@@ -54,7 +54,7 @@ output    = libface.a
 mklib     = static
 
 [face-shared-intel]
-template  = template-static-intel
+template  = template-shared-intel
 build_dir = lib
 target    = face.f90
 output    = libface.so
