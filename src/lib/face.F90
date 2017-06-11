@@ -141,20 +141,36 @@ contains
    character(len=*),             intent(in), optional :: color_bg  !< Background color definition.
    character(len=*),             intent(in), optional :: style     !< Style definition.
    character(len=:, kind=ASCII), allocatable          :: colorized !< Colorized string.
+   character(len=:, kind=ASCII), allocatable          :: buffer    !< Temporary buffer.
    integer(int32)                                     :: i         !< Counter.
 
    colorized = string
    if (present(color_fg)) then
       i = color_index(upper(color_fg))
-      if (i>0) colorized = CODE_START//trim(COLORS_FG(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(COLORS_FG(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    if (present(color_bg)) then
       i = color_index(upper(color_bg))
-      if (i>0) colorized = CODE_START//trim(COLORS_BG(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(COLORS_BG(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    if (present(style)) then
       i = style_index(upper(style))
-      if (i>0) colorized = CODE_START//trim(STYLES(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(STYLES(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    endfunction colorize_ascii
 
@@ -189,20 +205,36 @@ contains
    character(len=*),            intent(in), optional :: color_bg  !< Background color definition.
    character(len=*),            intent(in), optional :: style     !< Style definition.
    character(len=:, kind=UCS4), allocatable          :: colorized !< Colorized string.
+   character(len=:, kind=UCS4), allocatable          :: buffer    !< Temporary buffer.
    integer(int32)                                    :: i         !< Counter.
 
    colorized = string
    if (present(color_fg)) then
       i = color_index(upper(color_fg))
-      if (i>0) colorized = CODE_START//trim(COLORS_FG(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(COLORS_FG(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    if (present(color_bg)) then
       i = color_index(upper(color_bg))
-      if (i>0) colorized = CODE_START//trim(COLORS_BG(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(COLORS_BG(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    if (present(style)) then
       i = style_index(upper(style))
-      if (i>0) colorized = CODE_START//trim(STYLES(2, i))//CODE_END//colorized//CODE_CLEAR
+      if (i>0) then
+         buffer = CODE_START//trim(STYLES(2, i))//CODE_END
+         colorized = buffer//colorized
+         buffer = CODE_CLEAR
+         colorized = colorized//buffer
+      endif
    endif
    endfunction colorize_ucs4
 

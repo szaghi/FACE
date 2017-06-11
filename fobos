@@ -73,7 +73,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-gnu-debug]
 compiler        = gnu
@@ -87,7 +86,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-shared-gnu]
 compiler        = gnu
@@ -101,7 +99,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-intel]
 compiler        = intel
@@ -114,7 +111,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-intel-debug]
 compiler        = intel
@@ -127,7 +123,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-shared-intel]
 compiler        = intel
@@ -140,7 +135,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 # rules
 [rule-makedoc]
