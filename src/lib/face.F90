@@ -1,7 +1,7 @@
 !< FACE, Fortran Ansi Colors Environment.
 module face
 !< FACE, Fortran Ansi Colors Environment.
-use, intrinsic :: iso_fortran_env
+use, intrinsic :: iso_fortran_env, only: int32
 
 implicit none
 private
