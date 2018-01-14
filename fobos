@@ -35,28 +35,28 @@ build_dir = exe
 [face-static-gnu]
 template  = template-static-gnu
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.a
 mklib     = static
 
 [face-shared-gnu]
 template  = template-shared-gnu
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.so
 mklib     = shared
 
 [face-static-intel]
 template  = template-static-intel
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.a
 mklib     = static
 
 [face-shared-intel]
 template  = template-shared-intel
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.so
 mklib     = shared
 
