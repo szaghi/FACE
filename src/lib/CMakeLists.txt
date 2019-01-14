@@ -10,7 +10,7 @@ SET(CMAKE_Fortran_MODULE_DIRECTORY "${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_INCLUD
 
 set(LIB FACE)
 add_library(${LIB} face.F90)
-add_library(${NAMESPACE}::${LIB} ALIAS ${LIB})
+add_library(${NAMESPACE}${LIB} ALIAS ${LIB})
 
 target_include_directories(${LIB}
     INTERFACE
