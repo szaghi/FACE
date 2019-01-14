@@ -22,7 +22,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake/Modules)
 # set export variables needed for building
 #################################################################
 
-set(TARGETS_EXPORT_NAME "${PROJECT_NAME}-targets")
+set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
 set(NAMESPACE "${PROJECT_NAME}::")
 
 #################################################################
@@ -87,7 +87,7 @@ endif()
 #################################################################
 
 include(GNUInstallDirs)
-set(project_config "${PROJECT_NAME}-config.cmake")
+set(project_config "${PROJECT_NAME}Config.cmake")
 set(cmake_files_dir "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles")
 set(config_install_dir "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 set(config_build_dir "${CMAKE_CURRENT_BINARY_DIR}/${config_install_dir}")
