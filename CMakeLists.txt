@@ -76,9 +76,20 @@ add_subdirectory(src/lib)
 # ENABLE TESTING
 #################################################################
 
-option(BUILD_TESTING "Build the testing tree." OFF)
-if(BUILD_TESTING)
-    include(CTest)
+if(${PROJECT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
+    set(main_project TRUE)
+else()
+    set(main_project FALSE)
+endif()
+
+include(CMakeDependentOption)
+cmake_dependent_option(BUILD_TESTING_${PROJECT_NAME}
+     "Build the testing tree for project ${PROJECT_NAME}." OFF
+     "BUILD_TESTING;NOT main_project" OFF
+)
+
+if(main_project OR BUILD_TESTING_${PROJECT_NAME})
+    enable_testing()
     add_subdirectory(src/tests)
 endif()
 
