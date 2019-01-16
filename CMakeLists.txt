@@ -1,9 +1,10 @@
 # The target of the library FACE is exported
 # as FACE::FACE to a package config file for FACE
 #
-# usage find_package(FACE)
-# ...
-# target_link_library(<target> FACE)
+# usage:
+#     find_package(FACE)
+#     ...
+#     target_link_library(<target> FACE)
 #
 # the config file is generatet in the build and install directories
 
