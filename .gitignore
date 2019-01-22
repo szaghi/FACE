@@ -28,6 +28,7 @@
 doc/html/
 exe/
 wiki/
+/build
 
 # special files
 get_automatic_changelog.sh
