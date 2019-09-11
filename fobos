@@ -35,28 +35,28 @@ build_dir = exe
 [face-static-gnu]
 template  = template-static-gnu
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.a
 mklib     = static
 
 [face-shared-gnu]
 template  = template-shared-gnu
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.so
 mklib     = shared
 
 [face-static-intel]
 template  = template-static-intel
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.a
 mklib     = static
 
 [face-shared-intel]
 template  = template-shared-intel
 build_dir = lib
-target    = face.f90
+target    = face.F90
 output    = libface.so
 mklib     = shared
 
@@ -68,11 +68,11 @@ src             = src/
 cflags          = $CSTATIC_GNU $OPTIMIZE
 lflags          = $OPTIMIZE
 cflags_heritage = True
+preproc         = -DUCS4_SUPPORTED -DASCII_SUPPORTED
 colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-gnu-debug]
 compiler        = gnu
@@ -81,11 +81,11 @@ src             = src/
 cflags          = $CSTATIC_GNU $DEBUG_GNU
 lflags          = $DEBUG_GNU
 cflags_heritage = True
+preproc         = -DUCS4_SUPPORTED -DASCII_SUPPORTED
 colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-shared-gnu]
 compiler        = gnu
@@ -94,11 +94,11 @@ src             = src/
 cflags          = $CSHARED_GNU $OPTIMIZE
 lflags          = $LSHARED $OPTIMIZE
 cflags_heritage = True
+preproc         = -DUCS4_SUPPORTED -DASCII_SUPPORTED
 colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-intel]
 compiler        = intel
@@ -111,7 +111,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-static-intel-debug]
 compiler        = intel
@@ -124,7 +123,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 [template-shared-intel]
 compiler        = intel
@@ -137,7 +135,6 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
-preproc         =
 
 # rules
 [rule-makedoc]
