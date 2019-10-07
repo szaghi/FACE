@@ -4,7 +4,7 @@
 # usage:
 #     find_package(FACE)
 #     ...
-#     target_link_library(<target> FACE)
+#     target_link_library(<target> FACE::FACE)
 #
 # the config file is generatet in the build and install directories
 
@@ -17,7 +17,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake/Modules)
 
 
 # set export variables needed for building
-set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
+set(TARGETS_EXPORT_NAME "${PROJECT_NAME}-targets")
 set(NAMESPACE "${PROJECT_NAME}::")
 
 # set variables used for compile definitions of targets after support check
@@ -83,7 +83,7 @@ endif()
 
 # generate package config files
 include(GNUInstallDirs)
-set(project_config "${PROJECT_NAME}Config.cmake")
+set(project_config "${PROJECT_NAME}-config.cmake")
 set(cmake_files_dir "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles")
 set(config_install_dir "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 set(config_build_dir "${CMAKE_CURRENT_BINARY_DIR}/${config_install_dir}")
@@ -105,7 +105,12 @@ export(EXPORT ${TARGETS_EXPORT_NAME}
         ${config_build_dir}/${TARGETS_EXPORT_NAME}.cmake
 )
 
-#create package config
+# create package config
+# Variables needed by PackageConfig.cmake.in: PROJECT_NAME, TARGETS_EXPORT_NAME,
+#   EXPORTED_TARGET
+
+set(EXPORTED_TARGET FACE::FACE)
+
 include(CMakePackageConfigHelpers)
 configure_package_config_file(cmake/PackageConfig.cmake.in ${cmake_files_dir}/${project_config}
     INSTALL_DESTINATION ${config_install_dir}
