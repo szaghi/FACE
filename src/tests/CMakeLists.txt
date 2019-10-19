@@ -23,4 +23,5 @@ endforeach()
 
 target_compile_definitions(face_test_ucs4
     PRIVATE
-        ${ucs4_supported})
+        ${ucs4_supported}
+)
