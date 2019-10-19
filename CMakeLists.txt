@@ -138,4 +138,6 @@ install(
         ${CMAKE_CURRENT_BINARY_DIR}/${project_config_version}
     DESTINATION
         ${${PROJECT_NAME}_INSTALL_CMAKEDIR}
+    COMPONENT
+        ${PROJECT_NAME}_Development
 )
