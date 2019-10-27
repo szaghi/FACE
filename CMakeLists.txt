@@ -62,6 +62,7 @@ endif()
 # generate the library and install instructions
 add_subdirectory(src/lib)
 
+# documentation
 add_subdirectory(doc EXCLUDE_FROM_ALL)
 
 # testing
