@@ -1,7 +1,7 @@
 if(${PROJECT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
     set(doc doc)
 else()
-    set(doc ${NAMESPACE}doc)
+    set(doc ${PROJECT_NAME}_doc)
 endif()
 
 find_program(ford_exe NAMES ford)
