@@ -1,0 +1,37 @@
+name = "FACE"
+author = "Stefano Zaghi"
+copyright  = "Copyright (c) 2016 Stefano Zaghi"
+license = "multi-licensing system: GPLv3, BSD2, BSD3, and MIT"
+description = "Fortran Ansi Colors (and Styles) Environment"
+homepage = "https://github.com/szaghi/FACE"
+
+[build]
+auto-executables = false
+auto-examples = false
+auto-tests = false
+
+[library]
+source-dir = "src/lib"
+
+[install]
+library = true
+
+[[ test ]]
+name = "face_test_basic"
+source-dir = "src/tests"
+main = "face_test_basic.f90"
+
+[[ test ]]
+name = "face_test_colors"
+source-dir = "src/tests"
+main = "face_test_colors.f90"
+
+[[ test ]]
+name = "face_test_styles"
+source-dir = "src/tests"
+main = "face_test_styles.f90"
+
+[[ test ]]
+name = "face_test_ucs4"
+source-dir = "src/tests"
+main = "face_test_ucs4.F90"
