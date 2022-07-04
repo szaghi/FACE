@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Fortran Ansi Colors (and Styles) Environment">
-    
+   <meta name="description" content="Fortran Ansi Colors (and Styles) Environment">
     <meta name="author" content="Stefano Zaghi" >
     <link rel="icon" href="./favicon.png">
 
@@ -16,7 +14,7 @@
     <link href="./css/pygments.css" rel="stylesheet">
     <link href="./css/font-awesome.min.css" rel="stylesheet">
     <link href="./css/local.css" rel="stylesheet">
-    
+    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +24,6 @@
     
     <script src="./js/jquery-2.1.3.min.js"></script>
     <script src="./js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="./tipuesearch/tipuesearch_content.js"></script>
-    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="./tipuesearch/tipuesearch_set.js"></script>
-    <script src="./tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,45 +43,25 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
-              
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
             <li><a href="./lists/files.html">Source Files</a></li>
-				
-				
             <li><a href="./lists/modules.html">Modules</a></li>
-				
-            
-                                
             <li><a href="./lists/procedures.html">Procedures</a></li>
-				
-								
-				
-            <li><a href="./lists/programs.html">Programs</a></li>
-				
+                   <li><a href="./lists/programs.html">Programs</a></li>
+       
             </ul>
-            </li>
-
-<li class="visible-xs hidden-sm visible-lg"><a href="./lists/files.html">Source Files</a></li>
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="./lists/modules.html">Modules</a></li>
-
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="./lists/procedures.html">Procedures</a></li>
-
-                             
-
-<li class="visible-xs hidden-sm visible-lg"><a href="./lists/programs.html">Programs</a></li>
-
-          </ul>
         
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/procedures.html">Procedures</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="./lists/programs.html">Programs</a></li>
+          </ul>
         <form action="./search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -99,45 +70,33 @@
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <p>Fortran Ansi Colors (and Styles) Environment</p>
-        	 
 	<p> Find us on&hellip;</p>
         <p>
-        	 
           <a class="btn btn-lg btn-primary" href="https://github.com/szaghi/FACE" role="button">GitHub</a>
-			 
-			 
-			 
-			 
-	         
-			 
         </p>
       </div>
 
       <div class="row" id='text'>
-		  
         <div class="col-md-8">
-		  
           <h1>FACE</h1>
           <p><a name="top"></a></p>
-<h1 id="face"><a class="toclink" href="#face">FACE <a href=""><img alt="GitHub tag" src="https://img.shields.io/github/tag/szaghi/FACE.svg"></a> <a href="https://gitter.im/szaghi/FACE?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/szaghi/FACE" src="https://badges.gitter.im/Join%20Chat.svg"></a></a></h1>
+<h1 id="face">FACE <a href="https://github.com/szaghi/FACE/releases"><img alt="GitHub tag" src="https://img.shields.io/github/tag/szaghi/FACE.svg"></a> <a href="https://gitter.im/szaghi/FACE?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/szaghi/FACE" src="https://badges.gitter.im/Join%20Chat.svg"></a></h1>
 <p><a href=""><img alt="License" src="https://img.shields.io/badge/license-GNU%20GeneraL%20Public%20License%20v3,%20GPLv3-blue.svg"></a>
 <a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD2-red.svg"></a>
 <a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD3-red.svg"></a>
 <a href=""><img alt="License" src="https://img.shields.io/badge/license-MIT-red.svg"></a></p>
 <p><a href=""><img alt="Status" src="https://img.shields.io/badge/status-unstable-red.svg"></a>
-<a href="https://travis-ci.org/szaghi/FACE"><img alt="Build Status" src="https://travis-ci.org/szaghi/FACE.svg?branch=master"></a>
-<a href="http://codecov.io/github/szaghi/FACE?branch=master"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/szaghi/FACE.svg"></a></p>
-<h3 id="face-fortran-ansi-colors-and-styles-environment"><a class="toclink" href="#face-fortran-ansi-colors-and-styles-environment">FACE, Fortran Ansi Colors (and Styles) Environment</a></h3>
+<a href="https://github.com/szaghi/FACE/actions"><img alt="CI Status" src="https://github.com/szaghi/FACE/actions/workflows/ci.yml/badge.svg"></a>
+<a href="https://app.codecov.io/gh/szaghi/FACE"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/szaghi/FACE.svg"></a></p>
+<h3 id="face-fortran-ansi-colors-and-styles-environment">FACE, Fortran Ansi Colors (and Styles) Environment</h3>
 <blockquote>
 <p>A KISS pure Fortran Library for easy <em>colorize</em> (and stylize) strings.</p>
 </blockquote>
@@ -147,18 +106,14 @@
 <li>FACE is tiny;</li>
 <li>FACE is a Free, Open Source Project.</li>
 </ul>
-<h4 id="a-taste-of-face"><a class="toclink" href="#a-taste-of-face">A taste of FACE</a></h4>
-<div class="codehilite"><pre><span></span><span class="k">use </span><span class="n">face</span>
-<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39; World&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span>
-</pre></div>
+<h4 id="a-taste-of-face">A taste of FACE</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">face</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39; World&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 
-
-<h4 id="issues"><a class="toclink" href="#issues">Issues</a></h4>
-<p><a href=""><img alt="GitHub issues" src="https://img.shields.io/github/issues/szaghi/FACE.svg"></a>
-<a href="https://waffle.io/szaghi/FACE"><img alt="Ready in backlog" src="https://badge.waffle.io/szaghi/FACE.png?label=ready&amp;title=Ready"></a>
-<a href="https://waffle.io/szaghi/FACE"><img alt="In Progress" src="https://badge.waffle.io/szaghi/FACE.png?label=in%20progress&amp;title=In%20Progress"></a>
-<a href="https://waffle.io/szaghi/FACE"><img alt="Open bugs" src="https://badge.waffle.io/szaghi/FACE.png?label=bug&amp;title=Open%20Bugs"></a></p>
-<h4 id="compiler-support"><a class="toclink" href="#compiler-support">Compiler Support</a></h4>
+<h4 id="issues">Issues</h4>
+<p><a href=""><img alt="GitHub issues" src="https://img.shields.io/github/issues/szaghi/FACE.svg"></a></p>
+<h4 id="compiler-support">Compiler Support</h4>
 <p><a href=""><img alt="Compiler" src="https://img.shields.io/badge/GNU-v6.1.1+-brightgreen.svg"></a>
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/Intel-v16.1+-brightgreen.svg"></a>
 <a href=""><img alt="Compiler" src="https://img.shields.io/badge/IBM%20XL-not%20tested-yellow.svg"></a>
@@ -168,24 +123,24 @@
 <hr>
 <p>| <a href="#what-is-face">What is FACE?</a> | <a href="#main-features">Main features</a> | <a href="#copyrights">Copyrights</a> | <a href="#documentation">Documentation</a> | <a href="#install">Install</a> |</p>
 <hr>
-<h2 id="what-is-face"><a class="toclink" href="#what-is-face">What is FACE?</a></h2>
+<h2 id="what-is-face">What is FACE?</h2>
 <blockquote>
 <p><strong>FACE</strong> is KISS pure Fortran library for easy <em>colorize</em> (and <em>stylize</em>) strings: FACE allows for easy handling of <em>Ansi Colors and Styles codes</em> providing a user-friendly Fortran <em>environment</em>&hellip; just one <strong>function</strong> :smile:</p>
 </blockquote>
-<h2 id="main-features"><a class="toclink" href="#main-features">Main features</a></h2>
+<h2 id="main-features">Main features</h2>
 <blockquote>
 <p>FACE is a library allowing</p>
 </blockquote>
-<ul class="checklist">
-<li><input type="checkbox" disabled checked> easy handle of <em>Ansi Colors and Styles Codes</em>;</li>
-<li><input type="checkbox" disabled checked> Test Driven Developed (TDD);</li>
-<li><input type="checkbox" disabled checked> collaborative developed;</li>
-<li><input type="checkbox" disabled checked> well documented;</li>
-<li><input type="checkbox" disabled checked> free!</li>
+<ul>
+<li>[x] easy handle of <em>Ansi Colors and Styles Codes</em>;</li>
+<li>[x] Test Driven Developed (TDD);</li>
+<li>[x] collaborative developed;</li>
+<li>[x] well documented;</li>
+<li>[x] free!</li>
 </ul>
 <p>Any feature request is welcome.</p>
 <p>Go to <a href="#top">Top</a></p>
-<h2 id="copyrights"><a class="toclink" href="#copyrights">Copyrights</a></h2>
+<h2 id="copyrights">Copyrights</h2>
 <p>FACE is a Free and Open Source Software (FOSS), it is distributed under a <strong>very permissive</strong> multi-licensing system: selectable licenses are <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>, <a href="http://opensource.org/licenses/BSD-2-Clause">BSD2-Clause</a>, <a href="http://opensource.org/licenses/BSD-3-Clause">BSD3-Clause</a> and <a href="http://opensource.org/licenses/MIT">MIT</a>, feel free to select the license that best matches your workflow.</p>
 <blockquote>
 <p>Anyone is interest to use, to develop or to contribute to FACE is welcome.</p>
@@ -193,9 +148,9 @@
 <p>More details can be found on <a href="https://github.com/szaghi/FACE/wiki/Copyrights">wiki</a>.</p>
 <p>Go to <a href="#top">Top</a></p>
 <hr>
-<h2 id="documentation"><a class="toclink" href="#documentation">Documentation</a></h2>
+<h2 id="documentation">Documentation</h2>
 <p>Besides this README file the FACE documentation is contained into its own <a href="https://github.com/szaghi/FACE/wiki">wiki</a>. Detailed documentation of the API is contained into the <a href="http://szaghi.github.io/FACE/index.html">GitHub Pages</a> that can also be created locally by means of <a href="https://github.com/cmacmackin/ford">ford tool</a>.</p>
-<h3 id="usage"><a class="toclink" href="#usage">Usage</a></h3>
+<h3 id="usage">Usage</h3>
 <p>FACE expose only 3 procedures:</p>
 <ol>
 <li><code>colorize</code> the main function;</li>
@@ -203,30 +158,28 @@
 <li><code>styles_samples</code> an helper subroutine that prints to standard output a sample of all styles available;</li>
 </ol>
 <p>The usage is extremely simple, <code>colorize</code> returns an allocatable character with the requested (foreground and background) colors and style, while the 2 helper subroutines have not dummies:</p>
-<div class="codehilite"><pre><span></span><span class="k">use </span><span class="n">face</span>
-<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">error_message</span>
+<div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">face</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">error_message</span><span class="w"></span>
 
-<span class="n">error_message</span> <span class="o">=</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;error:&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; file not found!&#39;</span>
+<span class="n">error_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; file not found!&#39;</span><span class="w"></span>
 
-<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">error_message</span>
-<span class="k">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;suggestion: check you configuration&#39;</span><span class="p">,</span> <span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">error_message</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;suggestion: check you configuration&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span><span class="w"></span>
 
-<span class="k">call </span><span class="n">colors_samples</span> <span class="c">! print samples of all colors available</span>
-<span class="k">call </span><span class="n">styles_samples</span> <span class="c">! print samples of all styles available</span>
-</pre></div>
+<span class="k">call </span><span class="n">colors_samples</span><span class="w"> </span><span class="c">! print samples of all colors available</span>
+<span class="k">call </span><span class="n">styles_samples</span><span class="w"> </span><span class="c">! print samples of all styles available</span>
+</code></pre></div>
 
-
-<h4 id="colorize"><a class="toclink" href="#colorize">Colorize</a></h4>
+<h4 id="colorize">Colorize</h4>
 <p><code>colorize</code> is the main function used to colorize and stylize the input string. Its signature is:</p>
-<div class="codehilite"><pre><span></span><span class="k">pure function </span><span class="n">colorize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">color_fg</span><span class="p">,</span> <span class="n">color_bg</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">colorized</span><span class="p">)</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>           <span class="kd">::</span> <span class="n">string</span>    <span class="c">! Input string.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">color_fg</span>  <span class="c">! Foreground color definition.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">color_bg</span>  <span class="c">! Background color definition.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">style</span>     <span class="c">! Style definition.</span>
-  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span>          <span class="kd">::</span> <span class="n">colorized</span> <span class="c">! Colorized string.</span>
-<span class="k">end function </span><span class="n">colorize</span>
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code><span class="k">pure function </span><span class="n">colorize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="p">,</span><span class="w"> </span><span class="n">color_bg</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">colorized</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span><span class="w">    </span><span class="c">! Input string.</span>
+<span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">color_fg</span><span class="w">  </span><span class="c">! Foreground color definition.</span>
+<span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">color_bg</span><span class="w">  </span><span class="c">! Background color definition.</span>
+<span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">style</span><span class="w">     </span><span class="c">! Style definition.</span>
+<span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">colorized</span><span class="w"> </span><span class="c">! Colorized string.</span>
+<span class="k">end function </span><span class="n">colorize</span><span class="w"></span>
+</code></pre></div>
 
 <ul>
 <li><code>string</code> is the input string;</li>
@@ -240,10 +193,10 @@
 <li>no warning is returned if the colors or style definitions are wrong (or not available): in case the color or style are simply not applied.</li>
 </ul>
 </blockquote>
-<h3 id="available-colors-and-styles"><a class="toclink" href="#available-colors-and-styles">Available Colors and Styles</a></h3>
+<h3 id="available-colors-and-styles">Available Colors and Styles</h3>
 <p><img alt="samples" src="doc/samples.png"></p>
 <p>Go to <a href="#top">Top</a></p>
-<h2 id="install"><a class="toclink" href="#install">Install</a></h2>
+<h2 id="install">Install</h2>
 <p>FACE is a Fortran library composed by several modules.</p>
 <blockquote>
 <p>Before download and compile the library you must check the <a href="https://github.com/szaghi/FACE/wiki/Requirements">requirements</a>.</p>
@@ -256,9 +209,9 @@
 <li><a href="#build">build</a></li>
 </ul>
 <hr>
-<h3 id="install-script"><a class="toclink" href="#install-script">install script</a></h3>
+<h3 id="install-script">install script</h3>
 <p>FACE ships a bash script (downloadable from <a href="https://github.com/szaghi/FACE/releases/latest">here</a>) that is able to automatize the download and build steps. The script <code>install.sh</code> has the following usage:</p>
-<div class="codehilite"><pre><span></span>→ ./install.sh
+<div class="codehilite"><pre><span></span><code>→ ./install.sh
 Install script of FACE
 Usage:
 
@@ -282,8 +235,7 @@ Examples:
 install.sh --download git
 install.sh --build make
 install.sh --download wget --build cmake
-</pre></div>
-
+</code></pre></div>
 
 <blockquote>
 <p>The script does not cover all possibilities.</p>
@@ -302,40 +254,37 @@ install.sh --download wget --build cmake
 <p>you can mix any of the above combinations accordingly to the tools available.</p>
 </blockquote>
 <p>Typical usages are:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># download and prepare the project by means of git and build with GNU Make</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># download and prepare the project by means of git and build with GNU Make</span>
 install.sh --dowload git --build make
 <span class="c1"># download and prepare the project by means of wget (curl) and build with CMake</span>
 install.sh --dowload wget --build cmake
 <span class="c1"># download and prepare the project by means of git and build with FoBiS.py</span>
 install.sh --dowload git --build fobis
-</pre></div>
-
+</code></pre></div>
 
 <hr>
-<h3 id="manually-download-and-build"><a class="toclink" href="#manually-download-and-build">manually download and build</a></h3>
-<h4 id="download"><a class="toclink" href="#download">download</a></h4>
+<h3 id="manually-download-and-build">manually download and build</h3>
+<h4 id="download">download</h4>
 <p>To download all the available releases and utilities (fobos, license, readme, etc&hellip;), it can be convenient to <em>clone</em> whole the project:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/szaghi/FACE
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/szaghi/FACE
 <span class="nb">cd</span> FACE
-</pre></div>
-
+</code></pre></div>
 
 <p>Alternatively, you can directly download a release from GitHub server, see the <a href="https://github.com/szaghi/FACE/wiki/ChangeLog">ChangeLog</a>.</p>
-<h4 id="build"><a class="toclink" href="#build">build</a></h4>
+<h4 id="build">build</h4>
 <p>The most easy way to compile FACE is to use <a href="https://github.com/szaghi/FoBiS">FoBiS.py</a> within the provided fobos file.</p>
 <p>Consequently, it is strongly encouraged to install <a href="https://github.com/szaghi/FoBiS#install">FoBiS.py</a>.</p>
 <p>| <a href="#build-by-means-of-fobis">Build by means of FoBiS</a> | <a href="#build-by-means-of-gnu-make">Build by means of GNU Make</a> | <a href="#build-by-means-of-cmake">Build by means of CMake</a> |</p>
 <hr>
-<h4 id="build-by-means-of-fobis"><a class="toclink" href="#build-by-means-of-fobis">build by means of FoBiS</a></h4>
+<h4 id="build-by-means-of-fobis">build by means of FoBiS</h4>
 <p>FoBiS.py is a KISS tool for automatic building of modern Fortran projects. Providing very few options, FoBiS.py is able to build almost automatically complex Fortran projects with cumbersome inter-modules dependency. This removes the necessity to write complex makefile. Moreover, providing a very simple options file (in the FoBiS.py nomenclature indicated as <code>fobos</code> file) FoBiS.py can substitute the (ab)use of makefile for other project stuffs (build documentations, make project archive, etc&hellip;). FACE is shipped with a fobos file that can build the library in both <em>static</em> and <em>shared</em> forms and also build the <code>Test_Driver</code> program. The provided fobos file has several building modes.</p>
-<h5 id="listing-fobos-building-modes"><a class="toclink" href="#listing-fobos-building-modes">listing fobos building modes</a></h5>
+<h5 id="listing-fobos-building-modes">listing fobos building modes</h5>
 <p>Typing:</p>
-<div class="codehilite"><pre><span></span>FoBiS.py build -lmodes
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -lmodes
+</code></pre></div>
 
 <p>the following message should be printed:</p>
-<div class="codehilite"><pre><span></span>The fobos file defines the following modes:
+<div class="codehilite"><pre><span></span><code>The fobos file defines the following modes:
   - <span class="s2">&quot;face-shared-gnu&quot;</span>
   - <span class="s2">&quot;face-static-gnu&quot;</span>
   - <span class="s2">&quot;tests-gnu&quot;</span>
@@ -348,179 +297,109 @@ install.sh --dowload git --build fobis
   - <span class="s2">&quot;face-shared-intel-debug&quot;</span>
   - <span class="s2">&quot;face-static-intel-debug&quot;</span>
   - <span class="s2">&quot;tests-intel-debug&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>The modes should be self-explicative: <code>shared</code>, <code>static</code> and <code>test-driver</code> are the modes for building (in release, optimized form) the shared and static versions of the library and the Test Driver program, respectively. The other 3 modes are the same, but in debug form instead of release one. <code>-gnu</code> use the <code>GNU gfortran</code> compiler while <code>-intel</code> the Intel one.</p>
-<h5 id="building-the-library"><a class="toclink" href="#building-the-library">building the library</a></h5>
+<h5 id="building-the-library">building the library</h5>
 <p>The <code>shared</code> or <code>static</code> directories are created accordingly to the form of the library built. The compiled objects and mod files are placed inside this directory, as well as the linked library.</p>
-<h6 id="release-shared-library"><a class="toclink" href="#release-shared-library">release shared library</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode face-shared-gnu
-</pre></div>
+<h6 id="release-shared-library">release shared library</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode face-shared-gnu
+</code></pre></div>
 
+<h6 id="release-static-library">release static library</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode face-static-gnu
+</code></pre></div>
 
-<h6 id="release-static-library"><a class="toclink" href="#release-static-library">release static library</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode face-static-gnu
-</pre></div>
+<h6 id="debug-shared-library">debug shared library</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode face-shared-gnu-debug
+</code></pre></div>
 
+<h6 id="debug-static-library">debug static library</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode face-static-gnu-debug
+</code></pre></div>
 
-<h6 id="debug-shared-library"><a class="toclink" href="#debug-shared-library">debug shared library</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode face-shared-gnu-debug
-</pre></div>
-
-
-<h6 id="debug-static-library"><a class="toclink" href="#debug-static-library">debug static library</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode face-static-gnu-debug
-</pre></div>
-
-
-<h5 id="building-the-test-driver-program"><a class="toclink" href="#building-the-test-driver-program">building the Test Driver program</a></h5>
+<h5 id="building-the-test-driver-program">building the Test Driver program</h5>
 <p>The <code>Test_Driver</code> directory is created. The compiled objects and mod files are placed inside this directory, as well as the linked program.</p>
-<h6 id="release-test-driver-program"><a class="toclink" href="#release-test-driver-program">release test driver program</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode tests-gnu
-</pre></div>
+<h6 id="release-test-driver-program">release test driver program</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode tests-gnu
+</code></pre></div>
 
+<h6 id="debug-test-driver-program">debug test driver program</h6>
+<div class="codehilite"><pre><span></span><code>FoBiS.py build -mode tests-gnu-debug
+</code></pre></div>
 
-<h6 id="debug-test-driver-program"><a class="toclink" href="#debug-test-driver-program">debug test driver program</a></h6>
-<div class="codehilite"><pre><span></span>FoBiS.py build -mode tests-gnu-debug
-</pre></div>
-
-
-<h5 id="listing-fobos-rules"><a class="toclink" href="#listing-fobos-rules">listing fobos rules</a></h5>
+<h5 id="listing-fobos-rules">listing fobos rules</h5>
 <p>Typing:</p>
-<div class="codehilite"><pre><span></span>FoBiS.py rule -ls
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>FoBiS.py rule -ls
+</code></pre></div>
 
 <p>the following message should be printed:</p>
-<div class="codehilite"><pre><span></span>The fobos file defines the following rules:
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>The fobos file defines the following rules:
+</code></pre></div>
 
 <p>The rules should be self-explicative.</p>
 <hr>
-<h4 id="build-by-means-of-gnu-make"><a class="toclink" href="#build-by-means-of-gnu-make">build by means of GNU Make</a></h4>
+<h4 id="build-by-means-of-gnu-make">build by means of GNU Make</h4>
 <p>To be implemented.</p>
-<h4 id="build-by-means-of-cmake"><a class="toclink" href="#build-by-means-of-cmake">Build by means of CMake</a></h4>
+<h4 id="build-by-means-of-cmake">Build by means of CMake</h4>
 <p>To be implemented.</p>
 <p>Go to <a href="#top">Top</a></p>
         </div>
-		  
         <div class="col-md-4">
 	  <div class="well">
           <h2>Developer Info</h2>
           <h4>Stefano Zaghi</h4>
           
-          
-			   
             <div class="text-center"><div class="btn-group" role="group">
-              
               <a class="btn btn-lg btn-primary" href="mailto:stefano.zaghi@gmail.com"><i class="fa fa-envelope fa-lg"></i></a>
-              
-              
-              
               <a class="btn btn-lg btn-primary" href="https://github.com/szaghi"><i class="fa fa-github fa-lg"></i></a>
-				  
-				  
-              
-              
-              
-              
             </div></div>
-            
        </div>
        </div>
-       
       </div>
-      
-      
-      
-      
-		
       <div class="row">
         <div class="col-xs-6 col-sm-4">
               <h3>Source Files</h3>
-              <ul>
-                
-                  
-                    <li><a href='./sourcefile/face.f90.html'>face.f90</a></li>
-                  
-                
-                  
+              <ul>                    <li><a href='./sourcefile/face.f90.html'>face.F90</a></li>
                     <li><a href='./sourcefile/face_test_basic.f90.html'>face_test_basic.f90</a></li>
-                  
-                
-                  
                     <li><a href='./sourcefile/face_test_colors.f90.html'>face_test_colors.f90</a></li>
-                  
-                
-                  
                     <li><a href='./sourcefile/face_test_styles.f90.html'>face_test_styles.f90</a></li>
-                  
-                
-              </ul>
+                    <li><a href='./sourcefile/face_test_ucs4.f90.html'>face_test_ucs4.F90</a></li>
+</ul>
           </div>
-          
 		  <div class="col-xs-6 col-sm-4">
               <h3>Modules</h3>
-              <ul>
-                
-                  
-                    <li><a href='./module/face.html'>face</a></li>
-                  
-                
-              </ul>
+              <ul>                    <li><a href='./module/face.html'>face</a></li>
+</ul>
           </div>
-          
-          
 		  <div class="col-xs-6 col-sm-4">
               <h3>Procedures</h3>
-              <ul>
-                
-                  
-                    <li><a href='./proc/color_index.html'>color_index</a></li>
-                  
-                
-                  
-                    <li><a href='./proc/colorize.html'>colorize</a></li>
-                  
-                
-                  
+              <ul>                    <li><a href='./proc/color_index.html'>color_index</a></li>
+                    <li><a href='./interface/colorize.html'>colorize</a></li>
+                    <li><a href='./proc/colorize_ascii.html'>colorize_ascii</a></li>
+                    <li><a href='./proc/colorize_default.html'>colorize_default</a></li>
+                    <li><a href='./proc/colorize_ucs4.html'>colorize_ucs4</a></li>
                     <li><a href='./proc/colors_samples.html'>colors_samples</a></li>
-                  
-                
-                  
                     <li><a href='./proc/style_index.html'>style_index</a></li>
-                  
-                
-                  
                     <li><a href='./proc/styles_samples.html'>styles_samples</a></li>
-                  
-                
-                  
                     <li><a href='./proc/upper.html'>upper</a></li>
-                  
-                
-              </ul>
+</ul>
           </div>
-          
-          
       </div>
-
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
-        <div class="col-xs-6 col-md-4 col-md-push-4">
+        <div class="col-xs-6 col-md-6"><p>FACE was developed by Stefano Zaghi<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
-            <a href="https://github.com/cmacmackin/ford">FORD</a>
-            
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
           </p>
         </div>
-        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> FACE was developed by Stefano Zaghi</p></div>
       </div>
       <br>
       </div> <!-- /container -->    
@@ -543,12 +422,14 @@ install.sh --dowload git --build fobis
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="./tipuesearch/tipuesearch_content.js"></script>
+    <script src="./tipuesearch/tipuesearch_set.js"></script>
+    <script src="./tipuesearch/tipuesearch.js"></script>
+    
   </body>
 </html>

@@ -4,21 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Fortran Ansi Colors (and Styles) Environment">
-    
+   <meta name="description" content="Fortran Ansi Colors (and Styles) Environment">
     <meta name="author" content="Stefano Zaghi" >
     <link rel="icon" href="../favicon.png">
 
-    <title>
-All Procedures &ndash; FACE
+    <title>All Procedures &ndash; FACE
 </title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,13 +25,6 @@ All Procedures &ndash; FACE
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -54,45 +44,25 @@ All Procedures &ndash; FACE
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
-              
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
             <li><a href="../lists/modules.html">Modules</a></li>
-				
-            
-                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-								
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+                   <li><a href="../lists/programs.html">Programs</a></li>
+       
             </ul>
-            </li>
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-                             
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
-
-          </ul>
         
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+          </ul>
         <form action="../search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -101,207 +71,292 @@ All Procedures &ndash; FACE
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
       <div class="row">
         <div class="col-lg-12" id='text'>
 			 <h1>Procedures</h1>
 			 <table class="table table-striped">
 			 <thead><tr><th>Procedure</th><th>Location</th><th>Procedure Type</th><th>Description</th></tr></thead>
 			 <tbody>
-			 
-			   <tr><td><a href='../proc/color_index.html'>color_index</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Return the array-index corresponding to the queried color.</p></td></tr>
-			 
-			   <tr><td><a href='../proc/colorize.html'>colorize</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Colorize and stylize strings.</p></td></tr>
-			 
+			   <tr><td><a href='../proc/color_index.html'>color_index</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Return the array-index corresponding to the queried color.</p><a href="../proc/color_index.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../interface/colorize.html'>colorize</a></td><td><a href='../module/face.html'>face</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/colorize_ascii.html'>colorize_ascii</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Colorize and stylize strings, ASCII kind.</p></td></tr>
+			   <tr><td><a href='../proc/colorize_default.html'>colorize_default</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Colorize and stylize strings, DEFAULT kind.</p></td></tr>
+			   <tr><td><a href='../proc/colorize_ucs4.html'>colorize_ucs4</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Colorize and stylize strings, UCS4 kind.</p></td></tr>
 			   <tr><td><a href='../proc/colors_samples.html'>colors_samples</a></td><td><a href='../module/face.html'>face</a></td><td>Subroutine</td><td><p>Print to standard output all colors samples.</p></td></tr>
-			 
 			   <tr><td><a href='../proc/style_index.html'>style_index</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Return the array-index corresponding to the queried style.</p></td></tr>
-			 
 			   <tr><td><a href='../proc/styles_samples.html'>styles_samples</a></td><td><a href='../module/face.html'>face</a></td><td>Subroutine</td><td><p>Print to standard output all styles samples.</p></td></tr>
-			 
 			   <tr><td><a href='../proc/upper.html'>upper</a></td><td><a href='../module/face.html'>face</a></td><td>Function</td><td><p>Return a string with all uppercase characters.</p></td></tr>
-			 
 			 </tbody></table>
-             
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+             <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: call~~graph~~CallGraph Pages: 1 -->
-<svg id="callgraphCallGraph" width="418pt" height="166pt"
- viewBox="0.00 0.00 418.00 166.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="call~~graph~~CallGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 162)">
+<svg id="callgraphCallGraph" width="569pt" height="179pt"
+ viewBox="0.00 0.00 569.00 179.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="call~~graph~~CallGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 175)">
 <title>call~~graph~~CallGraph</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-162 415,-162 415,5 -4,5"/>
-<!-- proc~styles_samples -->
-<g id="node1" class="node"><title>proc~styles_samples</title>
-<a xlink:href="../proc/styles_samples.html" xlink:title="styles_samples">
-<polygon fill="#d9534f" stroke="#d9534f" points="212,-158 128,-158 128,-132 212,-132 212,-158"/>
-<text text-anchor="middle" x="170" y="-142.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">styles_samples</text>
-</a>
-</g>
-<!-- proc~colorize -->
-<g id="node5" class="node"><title>proc~colorize</title>
-<a xlink:href="../proc/colorize.html" xlink:title="colorize">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="306,-92 252,-92 252,-66 306,-66 306,-92"/>
-<text text-anchor="middle" x="279" y="-76.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize</text>
-</a>
-</g>
-<!-- proc~styles_samples&#45;&gt;proc~colorize -->
-<g id="edge2" class="edge"><title>proc~styles_samples&#45;&gt;proc~colorize</title>
-<path fill="none" stroke="#000000" d="M199.085,-131.978C204.782,-129.181 210.647,-126.121 216,-123 228.858,-115.503 242.473,-106.184 253.744,-98.055"/>
-<polygon fill="#000000" stroke="#000000" points="255.852,-100.85 261.855,-92.1204 251.718,-95.2008 255.852,-100.85"/>
-</g>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-175 565,-175 565,4 -4,4"/>
 <!-- proc~upper -->
-<g id="node2" class="node"><title>proc~upper</title>
-<a xlink:href="../proc/upper.html" xlink:title="upper">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="403,-136 349,-136 349,-110 403,-110 403,-136"/>
-<text text-anchor="middle" x="376" y="-120.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">upper</text>
+<g id="call~~graph~~CallGraph_node1" class="node">
+<title>proc~upper</title>
+<g id="a_call~~graph~~CallGraph_node1"><a xlink:href=".././proc/upper.html" xlink:title="upper">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="551.5,-108 497.5,-108 497.5,-84 551.5,-84 551.5,-108"/>
+<text text-anchor="middle" x="524.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">upper</text>
 </a>
 </g>
-<!-- proc~color_index -->
-<g id="node3" class="node"><title>proc~color_index</title>
-<a xlink:href="../proc/color_index.html" xlink:title="color_index">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="409,-92 343,-92 343,-66 409,-66 409,-92"/>
-<text text-anchor="middle" x="376" y="-76.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">color_index</text>
+</g>
+<!-- proc~colorize_default -->
+<g id="call~~graph~~CallGraph_node2" class="node">
+<title>proc~colorize_default</title>
+<g id="a_call~~graph~~CallGraph_node2"><a xlink:href=".././proc/colorize_default.html" xlink:title="colorize_default">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="452,-108 355,-108 355,-84 452,-84 452,-108"/>
+<text text-anchor="middle" x="403.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_default</text>
 </a>
+</g>
+</g>
+<!-- proc~colorize_default&#45;&gt;proc~upper -->
+<g id="call~~graph~~CallGraph_edge3" class="edge">
+<title>proc~colorize_default&#45;&gt;proc~upper</title>
+<path fill="none" stroke="#000000" d="M452.22,-96C463.88,-96 476.17,-96 487.2,-96"/>
+<polygon fill="#000000" stroke="#000000" points="487.33,-99.5 497.33,-96 487.33,-92.5 487.33,-99.5"/>
 </g>
 <!-- proc~style_index -->
-<g id="node4" class="node"><title>proc~style_index</title>
-<a xlink:href="../proc/style_index.html" xlink:title="style_index">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="409,-48 343,-48 343,-22 409,-22 409,-48"/>
-<text text-anchor="middle" x="376" y="-32.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">style_index</text>
+<g id="call~~graph~~CallGraph_node4" class="node">
+<title>proc~style_index</title>
+<g id="a_call~~graph~~CallGraph_node4"><a xlink:href=".././proc/style_index.html" xlink:title="style_index">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="560,-66 489,-66 489,-42 560,-42 560,-66"/>
+<text text-anchor="middle" x="524.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">style_index</text>
 </a>
 </g>
-<!-- proc~colorize&#45;&gt;proc~upper -->
-<g id="edge4" class="edge"><title>proc~colorize&#45;&gt;proc~upper</title>
-<path fill="none" stroke="#000000" d="M306.02,-91.2565C316.339,-95.9372 328.284,-101.355 339.351,-106.376"/>
-<polygon fill="#000000" stroke="#000000" points="338.236,-109.713 348.789,-110.657 341.128,-103.338 338.236,-109.713"/>
 </g>
-<!-- proc~colorize&#45;&gt;proc~color_index -->
-<g id="edge6" class="edge"><title>proc~colorize&#45;&gt;proc~color_index</title>
-<path fill="none" stroke="#000000" d="M306.02,-79C314.078,-79 323.128,-79 331.977,-79"/>
-<polygon fill="#000000" stroke="#000000" points="332.202,-82.5001 342.202,-79 332.202,-75.5001 332.202,-82.5001"/>
+<!-- proc~colorize_default&#45;&gt;proc~style_index -->
+<g id="call~~graph~~CallGraph_edge2" class="edge">
+<title>proc~colorize_default&#45;&gt;proc~style_index</title>
+<path fill="none" stroke="#000000" d="M438.6,-83.96C451.42,-79.44 466.18,-74.23 479.76,-69.44"/>
+<polygon fill="#000000" stroke="#000000" points="481.13,-72.67 489.39,-66.04 478.8,-66.07 481.13,-72.67"/>
 </g>
-<!-- proc~colorize&#45;&gt;proc~style_index -->
-<g id="edge8" class="edge"><title>proc~colorize&#45;&gt;proc~style_index</title>
-<path fill="none" stroke="#000000" d="M306.02,-66.7435C315.905,-62.2594 327.283,-57.0986 337.952,-52.259"/>
-<polygon fill="#000000" stroke="#000000" points="339.429,-55.4324 347.09,-48.1139 336.537,-49.0575 339.429,-55.4324"/>
+<!-- proc~color_index -->
+<g id="call~~graph~~CallGraph_node7" class="node">
+<title>proc~color_index</title>
+<g id="a_call~~graph~~CallGraph_node7"><a xlink:href=".././proc/color_index.html" xlink:title="color_index">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="561,-24 488,-24 488,0 561,0 561,-24"/>
+<text text-anchor="middle" x="524.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">color_index</text>
+</a>
+</g>
+</g>
+<!-- proc~colorize_default&#45;&gt;proc~color_index -->
+<g id="call~~graph~~CallGraph_edge1" class="edge">
+<title>proc~colorize_default&#45;&gt;proc~color_index</title>
+<path fill="none" stroke="#000000" d="M437.26,-83.84C442.41,-81.29 447.51,-78.33 452,-75 471.73,-60.33 469.17,-48.8 488,-33 489.32,-31.89 490.71,-30.81 492.13,-29.75"/>
+<polygon fill="#000000" stroke="#000000" points="494.26,-32.54 500.59,-24.05 490.34,-26.73 494.26,-32.54"/>
+</g>
+<!-- proc~colorize_ucs4 -->
+<g id="call~~graph~~CallGraph_node3" class="node">
+<title>proc~colorize_ucs4</title>
+<g id="a_call~~graph~~CallGraph_node3"><a xlink:href=".././proc/colorize_ucs4.html" xlink:title="colorize_ucs4">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="446,-66 361,-66 361,-42 446,-42 446,-66"/>
+<text text-anchor="middle" x="403.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_ucs4</text>
+</a>
+</g>
+</g>
+<!-- proc~colorize_ucs4&#45;&gt;proc~upper -->
+<g id="call~~graph~~CallGraph_edge6" class="edge">
+<title>proc~colorize_ucs4&#45;&gt;proc~upper</title>
+<path fill="none" stroke="#000000" d="M438.6,-66.04C453.92,-71.44 472.02,-77.83 487.55,-83.31"/>
+<polygon fill="#000000" stroke="#000000" points="486.74,-86.74 497.34,-86.77 489.07,-80.14 486.74,-86.74"/>
+</g>
+<!-- proc~colorize_ucs4&#45;&gt;proc~style_index -->
+<g id="call~~graph~~CallGraph_edge5" class="edge">
+<title>proc~colorize_ucs4&#45;&gt;proc~style_index</title>
+<path fill="none" stroke="#000000" d="M446.12,-54C456.69,-54 468.08,-54 478.79,-54"/>
+<polygon fill="#000000" stroke="#000000" points="478.8,-57.5 488.8,-54 478.8,-50.5 478.8,-57.5"/>
+</g>
+<!-- proc~colorize_ucs4&#45;&gt;proc~color_index -->
+<g id="call~~graph~~CallGraph_edge4" class="edge">
+<title>proc~colorize_ucs4&#45;&gt;proc~color_index</title>
+<path fill="none" stroke="#000000" d="M438.6,-41.96C451.42,-37.44 466.18,-32.23 479.76,-27.44"/>
+<polygon fill="#000000" stroke="#000000" points="481.13,-30.67 489.39,-24.04 478.8,-24.07 481.13,-30.67"/>
+</g>
+<!-- interface~colorize -->
+<g id="call~~graph~~CallGraph_node5" class="node">
+<title>interface~colorize</title>
+<g id="a_call~~graph~~CallGraph_node5"><a xlink:href=".././interface/colorize.html" xlink:title="colorize">
+<polygon fill="#a7506f" stroke="#a7506f" points="319,-108 264,-108 264,-84 319,-84 319,-108"/>
+<text text-anchor="middle" x="291.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize</text>
+</a>
+</g>
+</g>
+<!-- interface~colorize&#45;&gt;proc~colorize_default -->
+<g id="call~~graph~~CallGraph_edge7" class="edge">
+<title>interface~colorize&#45;&gt;proc~colorize_default</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M319.13,-96C326.89,-96 335.69,-96 344.59,-96"/>
+<polygon fill="#000000" stroke="#000000" points="344.63,-99.5 354.63,-96 344.63,-92.5 344.63,-99.5"/>
+</g>
+<!-- proc~colorize_ascii -->
+<g id="call~~graph~~CallGraph_node6" class="node">
+<title>proc~colorize_ascii</title>
+<g id="a_call~~graph~~CallGraph_node6"><a xlink:href=".././proc/colorize_ascii.html" xlink:title="colorize_ascii">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="445.5,-24 361.5,-24 361.5,0 445.5,0 445.5,-24"/>
+<text text-anchor="middle" x="403.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_ascii</text>
+</a>
+</g>
+</g>
+<!-- proc~colorize_ascii&#45;&gt;proc~upper -->
+<g id="call~~graph~~CallGraph_edge10" class="edge">
+<title>proc~colorize_ascii&#45;&gt;proc~upper</title>
+<path fill="none" stroke="#000000" d="M437.26,-24.16C442.41,-26.71 447.51,-29.67 452,-33 471.73,-47.67 469.17,-59.2 488,-75 489.32,-76.11 490.71,-77.19 492.13,-78.25"/>
+<polygon fill="#000000" stroke="#000000" points="490.34,-81.27 500.59,-83.95 494.26,-75.46 490.34,-81.27"/>
+</g>
+<!-- proc~colorize_ascii&#45;&gt;proc~style_index -->
+<g id="call~~graph~~CallGraph_edge9" class="edge">
+<title>proc~colorize_ascii&#45;&gt;proc~style_index</title>
+<path fill="none" stroke="#000000" d="M438.6,-24.04C451.42,-28.56 466.18,-33.77 479.76,-38.56"/>
+<polygon fill="#000000" stroke="#000000" points="478.8,-41.93 489.39,-41.96 481.13,-35.33 478.8,-41.93"/>
+</g>
+<!-- proc~colorize_ascii&#45;&gt;proc~color_index -->
+<g id="call~~graph~~CallGraph_edge8" class="edge">
+<title>proc~colorize_ascii&#45;&gt;proc~color_index</title>
+<path fill="none" stroke="#000000" d="M445.79,-12C456.06,-12 467.13,-12 477.61,-12"/>
+<polygon fill="#000000" stroke="#000000" points="477.83,-15.5 487.83,-12 477.83,-8.5 477.83,-15.5"/>
+</g>
+<!-- proc~styles_samples -->
+<g id="call~~graph~~CallGraph_node8" class="node">
+<title>proc~styles_samples</title>
+<g id="a_call~~graph~~CallGraph_node8"><a xlink:href=".././proc/styles_samples.html" xlink:title="styles_samples">
+<polygon fill="#d9534f" stroke="#d9534f" points="225,-171 133,-171 133,-147 225,-147 225,-171"/>
+<text text-anchor="middle" x="179" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">styles_samples</text>
+</a>
+</g>
+</g>
+<!-- proc~styles_samples&#45;&gt;interface~colorize -->
+<g id="call~~graph~~CallGraph_edge11" class="edge">
+<title>proc~styles_samples&#45;&gt;interface~colorize</title>
+<path fill="none" stroke="#000000" d="M209.85,-146.93C215.95,-144.19 222.26,-141.15 228,-138 240.93,-130.9 254.6,-121.9 265.85,-114.05"/>
+<polygon fill="#000000" stroke="#000000" points="268.16,-116.71 274.3,-108.07 264.12,-111 268.16,-116.71"/>
 </g>
 <!-- proc~colors_samples -->
-<g id="node6" class="node"><title>proc~colors_samples</title>
-<a xlink:href="../proc/colors_samples.html" xlink:title="colors_samples">
-<polygon fill="#d9534f" stroke="#d9534f" points="213,-114 127,-114 127,-88 213,-88 213,-114"/>
-<text text-anchor="middle" x="170" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colors_samples</text>
+<g id="call~~graph~~CallGraph_node9" class="node">
+<title>proc~colors_samples</title>
+<g id="a_call~~graph~~CallGraph_node9"><a xlink:href=".././proc/colors_samples.html" xlink:title="colors_samples">
+<polygon fill="#d9534f" stroke="#d9534f" points="226,-129 132,-129 132,-105 226,-105 226,-129"/>
+<text text-anchor="middle" x="179" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colors_samples</text>
 </a>
 </g>
-<!-- proc~colors_samples&#45;&gt;proc~colorize -->
-<g id="edge10" class="edge"><title>proc~colors_samples&#45;&gt;proc~colorize</title>
-<path fill="none" stroke="#000000" d="M213.706,-92.1785C223.088,-90.2851 232.913,-88.3019 242.01,-86.4658"/>
-<polygon fill="#000000" stroke="#000000" points="242.8,-89.8771 251.91,-84.4678 241.415,-83.0155 242.8,-89.8771"/>
 </g>
-<!-- program~face_test_styles -->
-<g id="node7" class="node"><title>program~face_test_styles</title>
-<a xlink:href="../program/face_test_styles.html" xlink:title="face_test_styles">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="214,-70 126,-70 126,-44 214,-44 214,-70"/>
-<text text-anchor="middle" x="170" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_styles</text>
-</a>
-</g>
-<!-- program~face_test_styles&#45;&gt;proc~colorize -->
-<g id="edge12" class="edge"><title>program~face_test_styles&#45;&gt;proc~colorize</title>
-<path fill="none" stroke="#000000" d="M214.649,-66.0117C223.692,-67.8369 233.109,-69.7377 241.86,-71.5038"/>
-<polygon fill="#000000" stroke="#000000" points="241.269,-74.9551 251.764,-73.5028 242.654,-68.0934 241.269,-74.9551"/>
+<!-- proc~colors_samples&#45;&gt;interface~colorize -->
+<g id="call~~graph~~CallGraph_edge12" class="edge">
+<title>proc~colors_samples&#45;&gt;interface~colorize</title>
+<path fill="none" stroke="#000000" d="M226.22,-108.22C235.4,-106.47 244.93,-104.66 253.74,-102.99"/>
+<polygon fill="#000000" stroke="#000000" points="254.53,-106.4 263.7,-101.09 253.22,-99.52 254.53,-106.4"/>
 </g>
 <!-- program~face_test_basic -->
-<g id="node8" class="node"><title>program~face_test_basic</title>
-<a xlink:href="../program/face_test_basic.html" xlink:title="face_test_basic">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="87,-136 1,-136 1,-110 87,-110 87,-136"/>
-<text text-anchor="middle" x="44" y="-120.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_basic</text>
+<g id="call~~graph~~CallGraph_node10" class="node">
+<title>program~face_test_basic</title>
+<g id="a_call~~graph~~CallGraph_node10"><a xlink:href=".././program/face_test_basic.html" xlink:title="face_test_basic">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="94,-150 0,-150 0,-126 94,-126 94,-150"/>
+<text text-anchor="middle" x="47" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_basic</text>
 </a>
+</g>
 </g>
 <!-- program~face_test_basic&#45;&gt;proc~styles_samples -->
-<g id="edge16" class="edge"><title>program~face_test_basic&#45;&gt;proc~styles_samples</title>
-<path fill="none" stroke="#000000" d="M87.7151,-130.633C97.2106,-132.291 107.353,-134.062 117.158,-135.774"/>
-<polygon fill="#000000" stroke="#000000" points="116.76,-139.257 127.213,-137.529 117.964,-132.361 116.76,-139.257"/>
+<g id="call~~graph~~CallGraph_edge14" class="edge">
+<title>program~face_test_basic&#45;&gt;proc~styles_samples</title>
+<path fill="none" stroke="#000000" d="M94.2,-145.46C103.42,-146.95 113.19,-148.53 122.68,-150.06"/>
+<polygon fill="#000000" stroke="#000000" points="122.39,-153.56 132.82,-151.7 123.51,-146.65 122.39,-153.56"/>
 </g>
 <!-- program~face_test_basic&#45;&gt;proc~colors_samples -->
-<g id="edge14" class="edge"><title>program~face_test_basic&#45;&gt;proc~colors_samples</title>
-<path fill="none" stroke="#000000" d="M87.7151,-115.367C96.9996,-113.746 106.903,-112.017 116.504,-110.341"/>
-<polygon fill="#000000" stroke="#000000" points="117.113,-113.787 126.362,-108.619 115.909,-106.892 117.113,-113.787"/>
+<g id="call~~graph~~CallGraph_edge13" class="edge">
+<title>program~face_test_basic&#45;&gt;proc~colors_samples</title>
+<path fill="none" stroke="#000000" d="M94.2,-130.54C103.2,-129.08 112.73,-127.54 122.01,-126.04"/>
+<polygon fill="#000000" stroke="#000000" points="122.64,-129.49 131.95,-124.44 121.52,-122.58 122.64,-129.49"/>
 </g>
 <!-- program~face_test_colors -->
-<g id="node9" class="node"><title>program~face_test_colors</title>
-<a xlink:href="../program/face_test_colors.html" xlink:title="face_test_colors">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="215,-26 125,-26 125,-1.24345e-14 215,-3.55271e-15 215,-26"/>
-<text text-anchor="middle" x="170" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_colors</text>
+<g id="call~~graph~~CallGraph_node11" class="node">
+<title>program~face_test_colors</title>
+<g id="a_call~~graph~~CallGraph_node11"><a xlink:href=".././program/face_test_colors.html" xlink:title="face_test_colors">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="228,-87 130,-87 130,-63 228,-63 228,-87"/>
+<text text-anchor="middle" x="179" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_colors</text>
 </a>
 </g>
-<!-- program~face_test_colors&#45;&gt;proc~colorize -->
-<g id="edge18" class="edge"><title>program~face_test_colors&#45;&gt;proc~colorize</title>
-<path fill="none" stroke="#000000" d="M199.085,-26.0217C204.782,-28.8194 210.647,-31.8787 216,-35 228.858,-42.4969 242.473,-51.8159 253.744,-59.945"/>
-<polygon fill="#000000" stroke="#000000" points="251.718,-62.7992 261.855,-65.8796 255.852,-57.1499 251.718,-62.7992"/>
+</g>
+<!-- program~face_test_colors&#45;&gt;interface~colorize -->
+<g id="call~~graph~~CallGraph_edge15" class="edge">
+<title>program~face_test_colors&#45;&gt;interface~colorize</title>
+<path fill="none" stroke="#000000" d="M228.15,-84.15C236.73,-85.78 245.55,-87.46 253.76,-89.02"/>
+<polygon fill="#000000" stroke="#000000" points="253.28,-92.49 263.76,-90.92 254.59,-85.61 253.28,-92.49"/>
+</g>
+<!-- program~face_test_styles -->
+<g id="call~~graph~~CallGraph_node12" class="node">
+<title>program~face_test_styles</title>
+<g id="a_call~~graph~~CallGraph_node12"><a xlink:href=".././program/face_test_styles.html" xlink:title="face_test_styles">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="227,-45 131,-45 131,-21 227,-21 227,-45"/>
+<text text-anchor="middle" x="179" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_styles</text>
+</a>
+</g>
+</g>
+<!-- program~face_test_styles&#45;&gt;interface~colorize -->
+<g id="call~~graph~~CallGraph_edge16" class="edge">
+<title>program~face_test_styles&#45;&gt;interface~colorize</title>
+<path fill="none" stroke="#000000" d="M209.85,-45.07C215.95,-47.81 222.26,-50.85 228,-54 240.93,-61.1 254.6,-70.1 265.85,-77.95"/>
+<polygon fill="#000000" stroke="#000000" points="264.12,-81 274.3,-83.93 268.16,-75.29 264.12,-81"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="556pt" height="34pt"
- viewBox="0.00 0.00 556.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
+<svg width="597pt" height="32pt"
+ viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-30 553,-30 553,5 -4,5"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
 <!-- Subroutine -->
-<g id="node1" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="64,-26 3.19744e-14,-26 0,-1.24345e-14 64,-3.55271e-15 64,-26"/>
-<text text-anchor="middle" x="32" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node2" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-26 82,-26 82,-1.24345e-14 136,-3.55271e-15 136,-26"/>
-<text text-anchor="middle" x="109" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Interface -->
-<g id="node3" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="208,-26 154,-26 154,-1.24345e-14 208,-3.55271e-15 208,-26"/>
-<text text-anchor="middle" x="181" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
 <!-- Unknown Procedure Type -->
-<g id="node4" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="362,-26 226,-26 226,-1.24345e-14 362,-3.55271e-15 362,-26"/>
-<text text-anchor="middle" x="294" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
+<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="434,-26 380,-26 380,-1.24345e-14 434,-3.55271e-15 434,-26"/>
-<text text-anchor="middle" x="407" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="548,-26 452,-26 452,-1.24345e-14 548,-3.55271e-15 548,-26"/>
-<text text-anchor="middle" x="500" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
+<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
@@ -312,29 +367,23 @@ All Procedures &ndash; FACE
     This could include the module procedures in a generic interface or the
     implementation in a submodule of an interface in a parent module.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
         </div>
       </div>
-
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
-        <div class="col-xs-6 col-md-4 col-md-push-4">
+        <div class="col-xs-6 col-md-6"><p>FACE was developed by Stefano Zaghi<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
-            <a href="https://github.com/cmacmackin/ford">FORD</a>
-            
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
           </p>
         </div>
-        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> FACE was developed by Stefano Zaghi</p></div>
       </div>
       <br>
       </div> <!-- /container -->    
@@ -357,12 +406,14 @@ All Procedures &ndash; FACE
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
   </body>
 </html>
