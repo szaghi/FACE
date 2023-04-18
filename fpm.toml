@@ -16,22 +16,22 @@ source-dir = "src/lib"
 [install]
 library = true
 
-[[ test ]]
+[[test]]
 name = "face_test_basic"
 source-dir = "src/tests"
 main = "face_test_basic.f90"
 
-[[ test ]]
+[[test]]
 name = "face_test_colors"
 source-dir = "src/tests"
 main = "face_test_colors.f90"
 
-[[ test ]]
+[[test]]
 name = "face_test_styles"
 source-dir = "src/tests"
 main = "face_test_styles.f90"
 
-[[ test ]]
+[[test]]
 name = "face_test_ucs4"
 source-dir = "src/tests"
 main = "face_test_ucs4.F90"
