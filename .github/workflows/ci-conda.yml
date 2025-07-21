@@ -1,0 +1,135 @@
+# https://github.com/gha3mi/setup-fortran-conda
+name: Setup Fortran Conda CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+permissions:
+  contents: write
+
+jobs:
+  test_fpm:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    name: ${{ matrix.os }}_${{ matrix.compiler }}_fpm
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            compiler: gfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: ubuntu-latest
+            compiler: ifx
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: ubuntu-latest
+            compiler: lfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: ubuntu-latest
+            compiler: flang-new
+            extra-packages: ""
+            FPM_FLAGS: --flag "-cpp"
+          - os: ubuntu-latest
+            compiler: nvfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: windows-latest
+            compiler: gfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: windows-latest
+            compiler: ifx
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: windows-latest
+            compiler: lfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: windows-latest
+            compiler: flang-new
+            extra-packages: ""
+            FPM_FLAGS: --flag "-cpp"
+          - os: macos-latest
+            compiler: gfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+          - os: macos-latest
+            compiler: lfortran
+            extra-packages: ""
+            FPM_FLAGS: ""
+
+    steps:
+      - name: Setup Fortran
+        uses: gha3mi/setup-fortran-conda@latest
+        with:
+          compiler: ${{ matrix.compiler }}
+          platform: ${{ matrix.os }}
+          extra-packages: ${{ matrix.extra-packages }}
+
+      - name: fpm test (debug)
+        if: ${{ matrix.os == 'windows-latest' && matrix.compiler == 'flang-new' }}
+        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --verbose
+
+      - name: fpm test (debug)
+        if: ${{ !(matrix.os == 'windows-latest' && matrix.compiler == 'flang-new') }}
+        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --profile debug --verbose
+
+      - name: fpm test (release)
+        if: ${{ matrix.os == 'windows-latest' && matrix.compiler == 'flang-new' }}
+        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --verbose
+
+      - name: fpm test (release)
+        if: ${{ !(matrix.os == 'windows-latest' && matrix.compiler == 'flang-new') }}
+        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --profile release --verbose
+
+
+  test_cmake:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    name: ${{ matrix.os }}_${{ matrix.compiler }}_cmake
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        compiler: [gfortran, ifx, lfortran, flang-new, nvfortran]
+        include:
+          - os: ubuntu-latest
+            extra-packages: "cmake, ninja"
+          - os: windows-latest
+            extra-packages: "cmake, ninja"
+          - os: macos-latest
+            extra-packages: "cmake, ninja"
+        exclude:
+          - os: macos-latest
+            compiler: flang-new
+          - os: macos-latest
+            compiler: ifx
+          - os: macos-latest
+            compiler: nvfortran
+          - os: windows-latest
+            compiler: nvfortran
+
+    steps:
+      - name: Setup Fortran
+        uses: gha3mi/setup-fortran-conda@latest
+        with:
+          compiler: ${{ matrix.compiler }}
+          platform: ${{ matrix.os }}
+          extra-packages: ${{ matrix.extra-packages }}
+
+      - name: cmake test (debug)
+        run: |
+          cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=Debug -DCMAKE_Fortran_COMPILER=${{ matrix.compiler }} -DBUILD_TESTING=TRUE -G Ninja
+          cmake --build build/debug --config Debug
+          ctest --test-dir build/debug --output-on-failure
+
+      - name: cmake test (release)
+        run: |
+          cmake -S . -B build/release -DCMAKE_BUILD_TYPE=Release -DCMAKE_Fortran_COMPILER=${{ matrix.compiler }} -DBUILD_TESTING=TRUE -G Ninja
+          cmake --build build/release --config Release
+          ctest --test-dir build/release --output-on-failure
