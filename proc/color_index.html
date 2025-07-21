@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,77 +12,68 @@
 
     <title>color_index &ndash; FACE</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-         <script src="../js/jquery-2.1.3.min.js"></script>
-         <script src="../js/svg-pan-zoom.min.js"></script>
-
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
           <a class="navbar-brand" href="../index.html">FACE </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
-              <a href="#" class="dropdown-toggle"
-                 data-toggle="dropdown" role="button"
-                 aria-haspopup="true"
-                 aria-expanded="false">
-                 Contents <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                    <li><a href="../lists/files.html">Source Files</a></li>
-                  <li><a href="../lists/modules.html">Modules</a></li>
-                  <li><a href="../lists/procedures.html">Procedures</a></li>
-                  <li><a href="../lists/programs.html">Programs</a></li>
-              </ul>
-            </li>
-                <li class="visible-xs hidden-sm visible-lg">
-                  <a href="../lists/files.html">Source Files</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
                 </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/modules.html">Modules</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/procedures.html">Procedures</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/programs.html">Programs</a>
-              </li>
-          </ul>
-            <form action="../search.html" class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
               </div>
-              <!--
-                  <button type="submit" class="btn btn-default">Submit</button>
-                  -->
-            </form>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
 
     <div class="container">
   <div class="row">
@@ -88,34 +81,39 @@
       <small>Function</small>
       
     </h1>
-      <div class="row" id="info-bar">
-    <div class="col-lg-12">
-      <div class="well well-sm">
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
-          <li id="statements"><i class="fa fa-list-ol"></i>
-            <a data-toggle="tooltip"
-               data-placement="bottom" data-html="true"
-               title=" 7.9% of total for procedures.">12 statements</a>
-          </li>
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 7.9% of total for procedures.">12 statements</a>
+            </li>
 
-            <li id="source-file">
+            <li class="list-inline-item" id="source-file">
               <i class="fa fa-code"></i>
               <a href="../src/face.F90"> Source File</a>
             </li>
         </ul>
-        <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/face.f90.html'>face.F90</a></li>
-              <li><a href='../module/face.html'>face</a></li>
-          <li class="active">color_index</li>
-        </ol>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/face.f90.html'>face.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/face.html'>face</a></li>
+            <li class="breadcrumb-item active" aria-current="page">color_index</li>
+          </ol>
+        </nav>
       </div>
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -143,8 +141,9 @@
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
       <div class="list-group">
         <a class="list-group-item" href="../proc/color_index.html#src">color_index</a>
       </div>
@@ -161,18 +160,22 @@
     
 
     <p>Return the array-index corresponding to the queried color.</p>
-<p></p><div class="alert alert-info" role="alert"><h4>Note</h4><p>Because Foreground and backround colors lists share the same name, no matter what array is used to find the color index.
-Thus, the foreground array is used.</p></div>
+<div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Because Foreground and backround colors lists share the same name, no matter what array is used to find the color index.
+Thus, the foreground array is used.</p>
+</div>
+
 
     <h3>Arguments</h3>
         <table class="table table-striped varlist">
     <thead>
       <tr>
-        <th>Type</th>
-<th>Intent</th><th>Optional</th>        <th>Attributes</th>
-        <th></th>
-        <th>Name</th>
-        <th></th>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
     </thead>
     <tbody>
         <tr>
@@ -201,11 +204,11 @@ Thus, the foreground array is used.</p></div>
       </h3>
       <p>Index into the colors arrays.</p>
     <br>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-  <h3 class="panel-title">Called by</h3>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
   <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -226,7 +229,7 @@ Thus, the foreground array is used.</p></div>
 <!-- proc~colorize_ascii -->
 <g id="proc~~color_index~~CalledByGraph_node2" class="node">
 <title>proc~colorize_ascii</title>
-<g id="a_proc~~color_index~~CalledByGraph_node2"><a xlink:href=".././proc/colorize_ascii.html" xlink:title="colorize_ascii">
+<g id="a_proc~~color_index~~CalledByGraph_node2"><a xlink:href="../proc/colorize_ascii.html" xlink:title="colorize_ascii">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="445.5,-129 361.5,-129 361.5,-105 445.5,-105 445.5,-129"/>
 <text text-anchor="middle" x="403.5" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_ascii</text>
 </a>
@@ -241,7 +244,7 @@ Thus, the foreground array is used.</p></div>
 <!-- proc~colorize_default -->
 <g id="proc~~color_index~~CalledByGraph_node3" class="node">
 <title>proc~colorize_default</title>
-<g id="a_proc~~color_index~~CalledByGraph_node3"><a xlink:href=".././proc/colorize_default.html" xlink:title="colorize_default">
+<g id="a_proc~~color_index~~CalledByGraph_node3"><a xlink:href="../proc/colorize_default.html" xlink:title="colorize_default">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="452,-87 355,-87 355,-63 452,-63 452,-87"/>
 <text text-anchor="middle" x="403.5" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_default</text>
 </a>
@@ -256,7 +259,7 @@ Thus, the foreground array is used.</p></div>
 <!-- proc~colorize_ucs4 -->
 <g id="proc~~color_index~~CalledByGraph_node4" class="node">
 <title>proc~colorize_ucs4</title>
-<g id="a_proc~~color_index~~CalledByGraph_node4"><a xlink:href=".././proc/colorize_ucs4.html" xlink:title="colorize_ucs4">
+<g id="a_proc~~color_index~~CalledByGraph_node4"><a xlink:href="../proc/colorize_ucs4.html" xlink:title="colorize_ucs4">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="446,-45 361,-45 361,-21 446,-21 446,-45"/>
 <text text-anchor="middle" x="403.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize_ucs4</text>
 </a>
@@ -271,7 +274,7 @@ Thus, the foreground array is used.</p></div>
 <!-- interface~colorize -->
 <g id="proc~~color_index~~CalledByGraph_node5" class="node">
 <title>interface~colorize</title>
-<g id="a_proc~~color_index~~CalledByGraph_node5"><a xlink:href=".././interface/colorize.html" xlink:title="colorize">
+<g id="a_proc~~color_index~~CalledByGraph_node5"><a xlink:href="../interface/colorize.html" xlink:title="colorize">
 <polygon fill="#a7506f" stroke="#a7506f" points="319,-87 264,-87 264,-63 319,-63 319,-87"/>
 <text text-anchor="middle" x="291.5" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colorize</text>
 </a>
@@ -286,7 +289,7 @@ Thus, the foreground array is used.</p></div>
 <!-- proc~colors_samples -->
 <g id="proc~~color_index~~CalledByGraph_node6" class="node">
 <title>proc~colors_samples</title>
-<g id="a_proc~~color_index~~CalledByGraph_node6"><a xlink:href=".././proc/colors_samples.html" xlink:title="colors_samples">
+<g id="a_proc~~color_index~~CalledByGraph_node6"><a xlink:href="../proc/colors_samples.html" xlink:title="colors_samples">
 <polygon fill="#d9534f" stroke="#d9534f" points="226,-150 132,-150 132,-126 226,-126 226,-150"/>
 <text text-anchor="middle" x="179" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">colors_samples</text>
 </a>
@@ -301,7 +304,7 @@ Thus, the foreground array is used.</p></div>
 <!-- proc~styles_samples -->
 <g id="proc~~color_index~~CalledByGraph_node7" class="node">
 <title>proc~styles_samples</title>
-<g id="a_proc~~color_index~~CalledByGraph_node7"><a xlink:href=".././proc/styles_samples.html" xlink:title="styles_samples">
+<g id="a_proc~~color_index~~CalledByGraph_node7"><a xlink:href="../proc/styles_samples.html" xlink:title="styles_samples">
 <polygon fill="#d9534f" stroke="#d9534f" points="225,-108 133,-108 133,-84 225,-84 225,-108"/>
 <text text-anchor="middle" x="179" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">styles_samples</text>
 </a>
@@ -316,7 +319,7 @@ Thus, the foreground array is used.</p></div>
 <!-- program~face_test_colors -->
 <g id="proc~~color_index~~CalledByGraph_node8" class="node">
 <title>program~face_test_colors</title>
-<g id="a_proc~~color_index~~CalledByGraph_node8"><a xlink:href=".././program/face_test_colors.html" xlink:title="face_test_colors">
+<g id="a_proc~~color_index~~CalledByGraph_node8"><a xlink:href="../program/face_test_colors.html" xlink:title="face_test_colors">
 <polygon fill="#f0ad4e" stroke="#f0ad4e" points="228,-66 130,-66 130,-42 228,-42 228,-66"/>
 <text text-anchor="middle" x="179" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_colors</text>
 </a>
@@ -331,7 +334,7 @@ Thus, the foreground array is used.</p></div>
 <!-- program~face_test_styles -->
 <g id="proc~~color_index~~CalledByGraph_node9" class="node">
 <title>program~face_test_styles</title>
-<g id="a_proc~~color_index~~CalledByGraph_node9"><a xlink:href=".././program/face_test_styles.html" xlink:title="face_test_styles">
+<g id="a_proc~~color_index~~CalledByGraph_node9"><a xlink:href="../program/face_test_styles.html" xlink:title="face_test_styles">
 <polygon fill="#f0ad4e" stroke="#f0ad4e" points="227,-24 131,-24 131,0 227,0 227,-24"/>
 <text text-anchor="middle" x="179" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_styles</text>
 </a>
@@ -346,7 +349,7 @@ Thus, the foreground array is used.</p></div>
 <!-- program~face_test_basic -->
 <g id="proc~~color_index~~CalledByGraph_node10" class="node">
 <title>program~face_test_basic</title>
-<g id="a_proc~~color_index~~CalledByGraph_node10"><a xlink:href=".././program/face_test_basic.html" xlink:title="face_test_basic">
+<g id="a_proc~~color_index~~CalledByGraph_node10"><a xlink:href="../program/face_test_basic.html" xlink:title="face_test_basic">
 <polygon fill="#f0ad4e" stroke="#f0ad4e" points="94,-129 0,-129 0,-105 94,-105 94,-129"/>
 <text text-anchor="middle" x="47" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">face_test_basic</text>
 </a>
@@ -366,17 +369,17 @@ Thus, the foreground array is used.</p></div>
 </g>
 </g>
 </svg>
-</div>        <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-          <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                   <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              <div class="modal-body">
+                <div class="modal-body">
 <p>Nodes of different colours represent the following: </p>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -384,11 +387,11 @@ Thus, the foreground array is used.</p></div>
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="597pt" height="32pt"
- viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
 <!-- Subroutine -->
 <g id="node1" class="node">
 <title>Subroutine</title>
@@ -407,23 +410,29 @@ Thus, the foreground array is used.</p></div>
 <polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
 <text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
-<!-- Unknown Procedure Type -->
+<!-- Type Bound Procedure -->
 <g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
 <title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
-<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node">
+<g id="node6" class="node">
 <title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
-<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node">
+<g id="node7" class="node">
 <title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
-<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
@@ -441,50 +450,19 @@ implementation in a submodule of an interface in a parent module.
     </div>
     <br>
 
-    <section class="visible-xs visible-sm hidden-md">
-        <h3>Contents</h3>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/color_index.html#src">color_index</a>
-      </div>
-    </div>
-
-
-    </section>
-    <br class="visible-xs visible-sm hidden-md">
-
 
     
     
 
     
     
+
 
 
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="w">   </span><span class="k">elemental function </span><span class="n">color_index</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="w"></span>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">elemental function </span><span class="n">color_index</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 <span class="w">   </span><span class="c">!&lt; Return the array-index corresponding to the queried color.</span>
 <span class="w">   </span><span class="c">!&lt;</span>
 <span class="w">   </span><span class="c">!&lt; @note Because Foreground and backround colors lists share the same name, no matter what array is used to find the color index.</span>
@@ -493,14 +471,14 @@ implementation in a submodule of an interface in a parent module.
 <span class="w">   </span><span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">color_index</span><span class="w"> </span><span class="c">!&lt; Index into the colors arrays.</span>
 <span class="w">   </span><span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">c</span><span class="w">           </span><span class="c">!&lt; Counter.</span>
 
-<span class="w">   </span><span class="n">color_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">   </span><span class="k">do </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">color_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">   </span><span class="k">do </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">COLORS_FG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">))</span><span class="o">==</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">color</span><span class="p">)))</span><span class="w"> </span><span class="k">then</span>
-<span class="k">         </span><span class="n">color_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"></span>
+<span class="k">         </span><span class="n">color_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span>
 <span class="w">         </span><span class="k">exit</span>
 <span class="k">      endif</span>
 <span class="k">   enddo</span>
-<span class="k">   endfunction </span><span class="n">color_index</span><span class="w"></span>
+<span class="k">   endfunction </span><span class="n">color_index</span>
 </pre></div>
 
     </section>
@@ -513,12 +491,15 @@ implementation in a submodule of an interface in a parent module.
     </div> <!-- /container -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-md-6"><p>FACE was developed by Stefano Zaghi<br>&copy; 2023 
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              FACE
+ was developed by Stefano Zaghi<br>              &copy; 2025 
 </p>
           </div>
-          <div class="col-xs-6 col-md-6">
-            <p class="text-right">
+          <div class="col">
+            <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
             </p>
@@ -527,32 +508,5 @@ implementation in a submodule of an interface in a parent module.
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript
-         ================================================== -->
-         <!-- Placed at the end of the document so the pages load faster -->
-    <!--
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        -->
-        <script src="../js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../js/ie10-viewport-bug-workaround.js"></script>
-
-        <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>
