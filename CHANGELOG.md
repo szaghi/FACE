@@ -1,8 +1,14 @@
+## [1.1.6] - 2026-02-16
+
+### ⚙️ Miscellaneous Tasks
+
+- *(fix)* Fix minor issues on GH actions
 ## [1.1.5] - 2026-02-16
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(fix)* Fix CI GH action
+- *(release)* V1.1.5
 ## [1.1.4] - 2026-02-16
 
 ### 🚀 Features
