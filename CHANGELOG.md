@@ -1,0 +1,53 @@
+## [1.1.9] - 2026-02-16
+
+### ⚙️ Miscellaneous Tasks
+
+- *(fix)* Clean/improve/sanitize CI GH actions
+## [1.1.8] - 2026-02-16
+
+### 📚 Documentation
+
+- *(fix)* Fix missing FORD config file
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.8
+## [1.1.7] - 2026-02-16
+
+### 📚 Documentation
+
+- Minor clean
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.7
+## [1.1.6] - 2026-02-16
+
+### ⚙️ Miscellaneous Tasks
+
+- *(fix)* Fix minor issues on GH actions
+- *(release)* V1.1.6
+## [1.1.5] - 2026-02-16
+
+### ⚙️ Miscellaneous Tasks
+
+- *(fix)* Fix CI GH action
+- *(release)* V1.1.5
+## [1.1.4] - 2026-02-16
+
+### 🚀 Features
+
+- Generalize bump.sh script (it can be used also in other repo)
+
+### 🐛 Bug Fixes
+
+- Use preprocessor to avoid -Wunused-function warning
+
+### 📚 Documentation
+
+- Migrate documentation to formal (ford2vitepress)
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.4
+## [1.0.0] - 2016-11-10

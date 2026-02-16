@@ -16,6 +16,9 @@ source-dir = "src/lib"
 [install]
 library = true
 
+[preprocess]
+[preprocess.cpp]
+
 [[test]]
 name = "face_test_basic"
 source-dir = "src/tests"
