@@ -6,8 +6,18 @@ A KISS pure Fortran library for easy *colorizing* and *stylizing* strings with A
 - Tiny — just one function covers everything;
 - Free and Open Source, multi-licensed.
 
-Full documentation: https://szaghi.github.io/FACE/
+**[Documentation](https://szaghi.github.io/FACE/)** | **[API Reference](https://szaghi.github.io/FACE/api/)**
 
+---
+
+## Copyrights
+
+FACE is distributed under a multi-licensing system:
+
+- **FOSS projects**: [GPL v3](http://www.gnu.org/licenses/gpl-3.0.html)
+- **Closed source / commercial**: [BSD 2-Clause](http://opensource.org/licenses/BSD-2-Clause), [BSD 3-Clause](http://opensource.org/licenses/BSD-3-Clause), or [MIT](http://opensource.org/licenses/MIT)
+
+Anyone interested in using, developing, or contributing to FACE is welcome — pick the license that best fits your needs.
 ---
 
 ## A taste of FACE
@@ -95,14 +105,3 @@ install.sh --download git --build cmake
 ```
 
 Supported download methods: `git`, `wget`. Supported build systems: `fobis`, `make`, `cmake`.
-
----
-
-## Copyrights
-
-FACE is distributed under a multi-licensing system:
-
-- **FOSS projects**: [GPL v3](http://www.gnu.org/licenses/gpl-3.0.html)
-- **Closed source / commercial**: [BSD 2-Clause](http://opensource.org/licenses/BSD-2-Clause), [BSD 3-Clause](http://opensource.org/licenses/BSD-3-Clause), or [MIT](http://opensource.org/licenses/MIT)
-
-Anyone interested in using, developing, or contributing to FACE is welcome — pick the license that best fits your needs.
