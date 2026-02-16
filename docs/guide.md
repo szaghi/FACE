@@ -1,14 +1,13 @@
-# FACE — Fortran Ansi Colors and Styles Environment
+# Guide
 
-A KISS pure Fortran library for easy *colorizing* and *stylizing* strings with ANSI escape codes.
+## What is FACE?
 
-- Pure Fortran (KISS), Fortran 2008+ standard compliant;
-- Tiny — just one function covers everything;
-- Free and Open Source, multi-licensed.
+**FACE** is a KISS pure Fortran library for easy *colorize* (and *stylize*) strings: FACE allows for easy handling of *Ansi Colors and Styles codes* providing a user-friendly Fortran *environment*... just one **function**.
 
-Full documentation: https://szaghi.github.io/FACE/
-
----
+- FACE is a pure Fortran (KISS) library;
+- FACE is Fortran 2008+ standard compliant;
+- FACE is tiny;
+- FACE is a Free, Open Source Project.
 
 ## A taste of FACE
 
@@ -16,8 +15,6 @@ Full documentation: https://szaghi.github.io/FACE/
 use face
 print '(A)', colorize('Hello', color_fg='red')//colorize(' World', color_fg='blue', style='underline_on')
 ```
-
----
 
 ## Usage
 
@@ -34,7 +31,7 @@ character(len=:), allocatable :: error_message
 error_message = colorize('error:', color_fg='red', style='underline_on')//' file not found!'
 
 print '(A)', error_message
-print '(A)', colorize('suggestion: check your configuration', color_fg='blue')
+print '(A)', colorize('suggestion: check you configuration', color_fg='blue')
 
 call colors_samples ! print samples of all colors available
 call styles_samples ! print samples of all styles available
@@ -58,9 +55,7 @@ end function colorize
 
 ## Available Colors and Styles
 
-![samples](docs/samples.png)
-
----
+![samples](./samples.png)
 
 ## Install
 
@@ -95,6 +90,60 @@ install.sh --download git --build cmake
 ```
 
 Supported download methods: `git`, `wget`. Supported build systems: `fobis`, `make`, `cmake`.
+
+## Contributing & releasing
+
+### Commit style
+
+FACE uses [Conventional Commits](https://www.conventionalcommits.org/) so that `CHANGELOG.md` is generated automatically from the git log:
+
+| Prefix | Purpose | Changelog section |
+|--------|---------|-------------------|
+| `feat:` | New feature or capability | New features |
+| `fix:` | Bug fix | Bug fixes |
+| `perf:` | Performance improvement | Performance |
+| `refactor:` | Code restructuring | Refactoring |
+| `docs:` | Documentation only | Documentation |
+| `test:` | Tests | Testing |
+| `build:` | Build system | Build system |
+| `ci:` | CI/CD pipeline | CI/CD |
+| `chore:` | Maintenance | Miscellaneous |
+
+Append `!` for breaking changes (`feat!:`, `fix!:`). Reference issues with `#123` — they are auto-linked.
+
+```
+feat: add new color definition
+fix: correct style code for bold (#42)
+feat!: rename colorize to colorise
+```
+
+### Creating a release
+
+Releases are fully automated via `scripts/bump.sh` and GitHub Actions. The only steps needed are:
+
+```bash
+# Install git-cliff once
+npx git-cliff@latest
+
+# Then, to release:
+scripts/bump.sh patch   # v1.2.3 → v1.2.4
+scripts/bump.sh minor   # v1.2.3 → v1.3.0
+scripts/bump.sh major   # v1.2.3 → v2.0.0
+scripts/bump.sh v2.1.0  # explicit version
+```
+
+`bump.sh` will ask for confirmation, then:
+
+1. Regenerate `CHANGELOG.md` from the git log via [git-cliff](https://git-cliff.org/)
+2. Commit with `chore(release): vX.Y.Z`
+3. Create an annotated git tag
+4. Push commit + tag
+
+Pushing the tag triggers the GitHub Actions release workflow, which automatically:
+- Runs the full test suite and uploads coverage to Codecov
+- Builds this documentation site and deploys it to GitHub Pages
+- Packages a versioned tarball `FACE-vX.Y.Z.tar.gz`
+- Publishes a GitHub release with the changelog section as release notes
 
 ---
 
