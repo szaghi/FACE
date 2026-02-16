@@ -1,8 +1,17 @@
+## [1.1.8] - 2026-02-16
+
+### 📚 Documentation
+
+- *(fix)* Fix missing FORD config file
 ## [1.1.7] - 2026-02-16
 
 ### 📚 Documentation
 
 - Minor clean
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.7
 ## [1.1.6] - 2026-02-16
 
 ### ⚙️ Miscellaneous Tasks
