@@ -2,83 +2,26 @@ name: CI
 
 on:
   push:
-    branches: [master]
-    tags: ['v*']
+    branches: ["**"]
+    tags-ignore: ["**"]   # tags are handled by release.yml
+  pull_request:
 
 jobs:
-  release:
-    if: startsWith(github.ref, 'refs/tags/')
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - uses: actions/checkout@v4
 
-      - name: PREPARE SYSTEM
-        run: |
-          pip install --upgrade FoBiS.py && FoBiS.py --version
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: MAKE TAR
-        run: |
-          echo "release version:" ${{ github.ref_name }}
-          FoBiS.py rule -ex maketar
-          ls *.tar.gz
+    - name: Setup build environment
+      uses: ./.github/actions/setup-face
 
-      - name: DEPLOY ASSET
-        if: ${{ !env.ACT }}
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ github.ref_name }}
-          prerelease: false
-          title: ${{ github.ref_name }}
-          files: |
-            *.tar.gz
-            ./scripts/install.sh
+    - name: Run tests with coverage
+      run: FoBiS.py rule -ex makecoverage
 
-  coverage:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: PREPARE SYSTEM
-        run: |
-          gfortran --version
-          gcov --version
-          pip install --upgrade FoBiS.py && FoBiS.py --version
-
-      - name: MAKE COVERAGE
-        run: |
-          FoBiS.py rule -ex makecoverage
-
-      - name: UPLOAD COVERAGE to CODECOV
-        if: ${{ !env.ACT }}
-        uses: codecov/codecov-action@v5
-
-  docs:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: PREPARE SYSTEM
-        run: |
-          pip install --upgrade formal-ford2vitepress && formal --version
-
-      - name: MAKE DOC
-        run: |
-          formal generate --project doc/main_page.md --output docs/api
-          cd docs && npm ci && npm run docs:build
-
-      - name: PUSH DOC to GH Pages
-        if: ${{ !env.ACT }}
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: docs/.vitepress/dist
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
