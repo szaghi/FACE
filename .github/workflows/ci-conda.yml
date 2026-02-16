@@ -6,8 +6,9 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   test_fpm:
@@ -47,10 +48,6 @@ jobs:
             extra-packages: ""
             FPM_FLAGS: ""
           - os: windows-latest
-            compiler: lfortran
-            extra-packages: ""
-            FPM_FLAGS: ""
-          - os: windows-latest
             compiler: flang-new
             extra-packages: ""
             FPM_FLAGS: --flag "-cpp"
@@ -64,28 +61,26 @@ jobs:
             FPM_FLAGS: ""
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Setup Fortran
-        uses: gha3mi/setup-fortran-conda@latest
+        uses: gha3mi/setup-fortran-conda@v0.11.5
         with:
           compiler: ${{ matrix.compiler }}
           platform: ${{ matrix.os }}
           extra-packages: ${{ matrix.extra-packages }}
 
       - name: fpm test (debug)
-        if: ${{ matrix.os == 'windows-latest' && matrix.compiler == 'flang-new' }}
-        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --verbose
-
-      - name: fpm test (debug)
         if: ${{ !(matrix.os == 'windows-latest' && matrix.compiler == 'flang-new') }}
         run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --profile debug --verbose
 
       - name: fpm test (release)
-        if: ${{ matrix.os == 'windows-latest' && matrix.compiler == 'flang-new' }}
-        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --verbose
-
-      - name: fpm test (release)
         if: ${{ !(matrix.os == 'windows-latest' && matrix.compiler == 'flang-new') }}
         run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --profile release --verbose
+
+      - name: fpm test (debug + release)
+        if: ${{ matrix.os == 'windows-latest' && matrix.compiler == 'flang-new' }}
+        run: fpm test --compiler ${{ matrix.compiler }} ${{ matrix.FPM_FLAGS }} --verbose
 
 
   test_cmake:
@@ -113,10 +108,14 @@ jobs:
             compiler: nvfortran
           - os: windows-latest
             compiler: nvfortran
+          - os: windows-latest
+            compiler: lfortran
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Setup Fortran
-        uses: gha3mi/setup-fortran-conda@latest
+        uses: gha3mi/setup-fortran-conda@v0.11.5
         with:
           compiler: ${{ matrix.compiler }}
           platform: ${{ matrix.os }}

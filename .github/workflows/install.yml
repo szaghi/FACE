@@ -1,39 +1,39 @@
 name: Test (alternative) Install Methods
 
-on: push
+on:
+  push:
+    branches: [master]
+    tags: ['v*']
 
 jobs:
   install:
-
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
-    - name: INSTALL SCRIPT + cmake
-      run: |
-        wget $(curl -s https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest | grep 'browser_' | cut -d\" -f4 | grep -i install.sh)
-        chmod +x install.sh
-        ./install.sh --download wget --build cmake
-        rm -rf *
+      - name: INSTALL SCRIPT + cmake
+        run: |
+          wget $(curl -s https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest | grep 'browser_' | cut -d\" -f4 | grep -i install.sh)
+          chmod +x install.sh
+          ./install.sh --download wget --build cmake
+          rm -rf *
 
-    - name: Checkout
-      run: |
-        git clone https://github.com/$GITHUB_REPOSITORY ./
+      - uses: actions/checkout@v4
 
-    - name: Setup FPM with GH Action
-      if: ${{ !env.ACT }}
-      uses: fortran-lang/setup-fpm@v4
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup FPM
+        if: ${{ !env.ACT }}
+        uses: fortran-lang/setup-fpm@v9
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Setup FPM without GH Action
-      if: ${{ env.ACT }}
-      run: |
-        wget $(curl -s https://api.github.com/repos/fortran-lang/fpm/releases/latest | grep 'browser_' | cut -d\" -f4 | grep -i linux | grep -vi sha256) -O fpm
-        chmod +x fpm
+      - name: Setup FPM (local)
+        if: ${{ env.ACT }}
+        run: |
+          wget $(curl -s https://api.github.com/repos/fortran-lang/fpm/releases/latest | grep 'browser_' | cut -d\" -f4 | grep -i linux | grep -vi sha256) -O fpm
+          chmod +x fpm
 
-    - name: FPM
-      run: |
-        export PATH=".:$PATH"
-        fpm build --profile release
+      - name: FPM
+        run: |
+          export PATH=".:$PATH"
+          fpm build --profile release
