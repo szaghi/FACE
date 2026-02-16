@@ -15,20 +15,14 @@ jobs:
         python --version
         gfortran --version
         gcov --version
-        sudo apt install graphviz
-        pip install --upgrade markdown
-        pip install --upgrade markdown-include
-        pip install --upgrade python-markdown-math
-        pip install --upgrade toposort
-        pip install --upgrade jinja2
-        pip install --upgrade pygments
-        pip install --upgrade beautifulsoup4
-        pip install --upgrade graphviz
-        pip install --upgrade tqdm
-        pip install --upgrade importlib-metadata
-        pip install --upgrade ford && ford --version
         pip install --upgrade FoBiS.py && FoBiS.py --version
-    
+        pip install --upgrade formal-ford2vitepress && formal --version
+
+    - name: SETUP NODE
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
     - name: CHECKOUT
       id: checkout
       run: |
@@ -44,7 +38,7 @@ jobs:
         ls *.tar.gz
 
     - name: DEPLOY ASSET
-      if: ${{ !env.ACT }}
+      if: ${{ !env.ACT && startsWith(github.ref, 'refs/tags/') }}
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -65,10 +59,11 @@ jobs:
 
     - name: MAKE DOC
       run: |
-        FoBiS.py rule -ex makedoc
+        formal generate --project doc/main_page.md --output docs/api
+        cd docs && npm ci && npm run docs:build
 
     - name: PUSH DOC to GH Pages
       if: ${{ !env.ACT }}
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: doc/html
+        folder: docs/.vitepress/dist
