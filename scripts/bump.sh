@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bump.sh — Bump PENF version, update CHANGELOG.md, commit, tag and push.
+# bump.sh — Bump version, update CHANGELOG.md, commit, tag and push.
 #
 # Usage:
 #   scripts/bump.sh <patch|minor|major>   # auto-compute next version
@@ -42,6 +42,10 @@ command -v git &>/dev/null || error "git not found."
 # ── Must be run from repo root ────────────────────────────────────────────────
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 cd "$REPO_ROOT"
+
+# ── Detect repo slug (owner/name) from remote ────────────────────────────────
+REMOTE_URL="$(git remote get-url origin 2>/dev/null || true)"
+REPO_SLUG="$(echo "$REMOTE_URL" | sed -E 's|.*[:/]([^/]+/[^/]+)$|\1|' | sed 's|\.git$||')"
 
 # ── Guard: clean working tree ─────────────────────────────────────────────────
 if [[ -n "$(git status --porcelain)" ]]; then
@@ -121,5 +125,5 @@ echo -e "${BOLD}━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo -e "  GitHub Actions release workflow triggered."
 echo -e "  Follow progress at:"
-echo -e "  ${CYAN}https://github.com/szaghi/PENF/actions${RESET}"
+echo -e "  ${CYAN}https://github.com/${REPO_SLUG}/actions${RESET}"
 echo ""
