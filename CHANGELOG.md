@@ -1,8 +1,17 @@
+## [1.1.9] - 2026-02-16
+
+### ⚙️ Miscellaneous Tasks
+
+- *(fix)* Clean/improve/sanitize CI GH actions
 ## [1.1.8] - 2026-02-16
 
 ### 📚 Documentation
 
 - *(fix)* Fix missing FORD config file
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.8
 ## [1.1.7] - 2026-02-16
 
 ### 📚 Documentation
