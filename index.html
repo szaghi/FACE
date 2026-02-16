@@ -92,91 +92,42 @@
       <div class="row" id='text'>
         <div class=col-md-8>
           <h1>FACE</h1>
-          <p><a name="top"></a></p>
-<h1 id="face">FACE <a href="https://github.com/szaghi/FACE/releases"><img alt="GitHub tag" src="https://img.shields.io/github/tag/szaghi/FACE.svg"></a> <a href="https://gitter.im/szaghi/FACE?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/szaghi/FACE" src="https://badges.gitter.im/Join%20Chat.svg"></a></h1>
-<p><a href=""><img alt="License" src="https://img.shields.io/badge/license-GNU%20GeneraL%20Public%20License%20v3,%20GPLv3-blue.svg"></a>
-<a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD2-red.svg"></a>
-<a href=""><img alt="License" src="https://img.shields.io/badge/license-BSD3-red.svg"></a>
-<a href=""><img alt="License" src="https://img.shields.io/badge/license-MIT-red.svg"></a></p>
-<p><a href=""><img alt="Status" src="https://img.shields.io/badge/status-unstable-red.svg"></a>
-<a href="https://github.com/szaghi/FACE/actions"><img alt="CI Status" src="https://github.com/szaghi/FACE/actions/workflows/ci.yml/badge.svg"></a>
-<a href="https://app.codecov.io/gh/szaghi/FACE"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/szaghi/FACE.svg"></a></p>
-<h3 id="face-fortran-ansi-colors-and-styles-environment">FACE, Fortran Ansi Colors (and Styles) Environment</h3>
-<blockquote>
-<p>A KISS pure Fortran Library for easy <em>colorize</em> (and stylize) strings.</p>
-</blockquote>
+          <h1 id="face-fortran-ansi-colors-and-styles-environment">FACE — Fortran Ansi Colors and Styles Environment</h1>
+<p>A KISS pure Fortran library for easy <em>colorizing</em> and <em>stylizing</em> strings with ANSI escape codes.</p>
 <ul>
-<li>FACE is a pure Fortran (KISS) library;</li>
-<li>FACE is Fortran 2008+ standard compliant;</li>
-<li>FACE is tiny;</li>
-<li>FACE is a Free, Open Source Project.</li>
+<li>Pure Fortran (KISS), Fortran 2008+ standard compliant;</li>
+<li>Tiny — just one function covers everything;</li>
+<li>Free and Open Source, multi-licensed.</li>
 </ul>
-<h4 id="a-taste-of-face">A taste of FACE</h4>
+<p>Full documentation: https://szaghi.github.io/FACE/</p>
+<hr>
+<h2 id="a-taste-of-face">A taste of FACE</h2>
 <div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">face</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span><span class="o">//</span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39; World&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<h4 id="issues">Issues</h4>
-<p><a href=""><img alt="GitHub issues" src="https://img.shields.io/github/issues/szaghi/FACE.svg"></a></p>
-<h4 id="compiler-support">Compiler Support</h4>
-<p><a href=""><img alt="Compiler" src="https://img.shields.io/badge/GNU-v6.1.1+-brightgreen.svg"></a>
-<a href=""><img alt="Compiler" src="https://img.shields.io/badge/Intel-v16.1+-brightgreen.svg"></a>
-<a href=""><img alt="Compiler" src="https://img.shields.io/badge/IBM%20XL-not%20tested-yellow.svg"></a>
-<a href=""><img alt="Compiler" src="https://img.shields.io/badge/g95-not%20tested-yellow.svg"></a>
-<a href=""><img alt="Compiler" src="https://img.shields.io/badge/NAG-not%20tested-yellow.svg"></a>
-<a href=""><img alt="Compiler" src="https://img.shields.io/badge/PGI-not%20tested-yellow.svg"></a></p>
 <hr>
-<p>| <a href="#what-is-face">What is FACE?</a> | <a href="#main-features">Main features</a> | <a href="#copyrights">Copyrights</a> | <a href="#documentation">Documentation</a> | <a href="#install">Install</a> |</p>
-<hr>
-<h2 id="what-is-face">What is FACE?</h2>
-<blockquote>
-<p><strong>FACE</strong> is KISS pure Fortran library for easy <em>colorize</em> (and <em>stylize</em>) strings: FACE allows for easy handling of <em>Ansi Colors and Styles codes</em> providing a user-friendly Fortran <em>environment</em>&hellip; just one <strong>function</strong> :smile:</p>
-</blockquote>
-<h2 id="main-features">Main features</h2>
-<blockquote>
-<p>FACE is a library allowing</p>
-</blockquote>
-<ul>
-<li>[x] easy handle of <em>Ansi Colors and Styles Codes</em>;</li>
-<li>[x] Test Driven Developed (TDD);</li>
-<li>[x] collaborative developed;</li>
-<li>[x] well documented;</li>
-<li>[x] free!</li>
-</ul>
-<p>Any feature request is welcome.</p>
-<p>Go to <a href="#top">Top</a></p>
-<h2 id="copyrights">Copyrights</h2>
-<p>FACE is a Free and Open Source Software (FOSS), it is distributed under a <strong>very permissive</strong> multi-licensing system: selectable licenses are <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>, <a href="http://opensource.org/licenses/BSD-2-Clause">BSD2-Clause</a>, <a href="http://opensource.org/licenses/BSD-3-Clause">BSD3-Clause</a> and <a href="http://opensource.org/licenses/MIT">MIT</a>, feel free to select the license that best matches your workflow.</p>
-<blockquote>
-<p>Anyone is interest to use, to develop or to contribute to FACE is welcome.</p>
-</blockquote>
-<p>More details can be found on <a href="https://github.com/szaghi/FACE/wiki/Copyrights">wiki</a>.</p>
-<p>Go to <a href="#top">Top</a></p>
-<hr>
-<h2 id="documentation">Documentation</h2>
-<p>Besides this README file the FACE documentation is contained into its own <a href="https://github.com/szaghi/FACE/wiki">wiki</a>. Detailed documentation of the API is contained into the <a href="http://szaghi.github.io/FACE/index.html">GitHub Pages</a> that can also be created locally by means of <a href="https://github.com/cmacmackin/ford">ford tool</a>.</p>
-<h3 id="usage">Usage</h3>
-<p>FACE expose only 3 procedures:</p>
+<h2 id="usage">Usage</h2>
+<p>FACE exposes only 3 procedures:</p>
 <ol>
-<li><code>colorize</code> the main function;</li>
-<li><code>colors_samples</code> an helper subroutine that prints to standard output a sample of all colors available;</li>
-<li><code>styles_samples</code> an helper subroutine that prints to standard output a sample of all styles available;</li>
+<li><code>colorize</code> — the main function;</li>
+<li><code>colors_samples</code> — prints a sample of all available colors to standard output;</li>
+<li><code>styles_samples</code> — prints a sample of all available styles to standard output.</li>
 </ol>
-<p>The usage is extremely simple, <code>colorize</code> returns an allocatable character with the requested (foreground and background) colors and style, while the 2 helper subroutines have not dummies:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">use </span><span class="n">face</span>
 <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">error_message</span>
 
 <span class="n">error_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline_on&#39;</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; file not found!&#39;</span>
 
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">error_message</span>
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;suggestion: check you configuration&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colorize</span><span class="p">(</span><span class="s1">&#39;suggestion: check your configuration&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 
 <span class="k">call </span><span class="n">colors_samples</span><span class="w"> </span><span class="c">! print samples of all colors available</span>
 <span class="k">call </span><span class="n">styles_samples</span><span class="w"> </span><span class="c">! print samples of all styles available</span>
 </code></pre></div>
 
-<h4 id="colorize">Colorize</h4>
-<p><code>colorize</code> is the main function used to colorize and stylize the input string. Its signature is:</p>
+<h3 id="colorize">colorize</h3>
+<p><code>colorize</code> returns an allocatable character with the requested foreground color, background color, and style. All arguments except <code>string</code> are optional.</p>
 <div class="codehilite"><pre><span></span><code><span class="k">pure function </span><span class="n">colorize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">color_fg</span><span class="p">,</span><span class="w"> </span><span class="n">color_bg</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">colorized</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span><span class="w">    </span><span class="c">! Input string.</span>
 <span class="w">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">color_fg</span><span class="w">  </span><span class="c">! Foreground color definition.</span>
@@ -186,169 +137,43 @@
 <span class="k">end function </span><span class="n">colorize</span>
 </code></pre></div>
 
-<ul>
-<li><code>string</code> is the input string;</li>
-<li><code>color_fg</code> is the foreground color definition and it is optional;</li>
-<li><code>color_bg</code> is the background color definition and it is optional;</li>
-<li><code>style</code> is the style definition and it is optional;</li>
-</ul>
 <blockquote>
-<ul>
-<li>colors and style definitions are case <strong>insensitive</strong>;</li>
-<li>no warning is returned if the colors or style definitions are wrong (or not available): in case the color or style are simply not applied.</li>
-</ul>
+<p>Colors and style definitions are case <strong>insensitive</strong>. No warning is returned for unrecognized values — the color or style is simply not applied.</p>
 </blockquote>
-<h3 id="available-colors-and-styles">Available Colors and Styles</h3>
-<p><img alt="samples" src="doc/samples.png"></p>
-<p>Go to <a href="#top">Top</a></p>
+<h2 id="available-colors-and-styles">Available Colors and Styles</h2>
+<p><img alt="samples" src="docs/samples.png"></p>
+<hr>
 <h2 id="install">Install</h2>
-<p>FACE is a Fortran library composed by several modules.</p>
-<blockquote>
-<p>Before download and compile the library you must check the <a href="https://github.com/szaghi/FACE/wiki/Requirements">requirements</a>.</p>
-</blockquote>
-<p>To download and build the project two main ways are available:</p>
+<h3 id="fpm">FPM</h3>
+<div class="codehilite"><pre><span></span><code>fpm<span class="w"> </span>build
+fpm<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+
+<p>Or add FACE as a dependency in your <code>fpm.toml</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
+<span class="n">FACE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">&quot;https://github.com/szaghi/FACE&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="cmake">CMake</h3>
+<div class="codehilite"><pre><span></span><code>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build
+cmake<span class="w"> </span>--install<span class="w"> </span>build
+</code></pre></div>
+
+<h3 id="install-script">Install script</h3>
+<p>FACE ships a bash script (<code>install.sh</code>, downloadable from the <a href="https://github.com/szaghi/FACE/releases/latest">latest release</a>) that automates download and build:</p>
+<div class="codehilite"><pre><span></span><code>install.sh<span class="w"> </span>--download<span class="w"> </span>git<span class="w"> </span>--build<span class="w"> </span>cmake
+</code></pre></div>
+
+<p>Supported download methods: <code>git</code>, <code>wget</code>. Supported build systems: <code>fobis</code>, <code>make</code>, <code>cmake</code>.</p>
+<hr>
+<h2 id="copyrights">Copyrights</h2>
+<p>FACE is distributed under a multi-licensing system:</p>
 <ul>
-<li>exploit the <a href="#install-script">install script</a> that can be downloaded <a href="https://github.com/szaghi/FACE/releases/latest">here</a></li>
-<li><a href="#manually-download-and-build">manually download and build</a>:</li>
-<li><a href="#download">download</a></li>
-<li><a href="#build">build</a></li>
+<li><strong>FOSS projects</strong>: <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPL v3</a></li>
+<li><strong>Closed source / commercial</strong>: <a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause</a>, <a href="http://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause</a>, or <a href="http://opensource.org/licenses/MIT">MIT</a></li>
 </ul>
-<hr>
-<h3 id="install-script">install script</h3>
-<p>FACE ships a bash script (downloadable from <a href="https://github.com/szaghi/FACE/releases/latest">here</a>) that is able to automatize the download and build steps. The script <code>install.sh</code> has the following usage:</p>
-<div class="codehilite"><pre><span></span><code>→<span class="w"> </span>./install.sh
-Install<span class="w"> </span>script<span class="w"> </span>of<span class="w"> </span>FACE
-Usage:
-
-install.sh<span class="w"> </span>--help<span class="p">|</span>-?
-<span class="w">    </span>Print<span class="w"> </span>this<span class="w"> </span>usage<span class="w"> </span>output<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
-
-install.sh<span class="w"> </span>--download<span class="p">|</span>-d<span class="w"> </span>&lt;arg&gt;<span class="w"> </span><span class="o">[</span>--verbose<span class="p">|</span>-v<span class="o">]</span>
-<span class="w">    </span>Download<span class="w"> </span>the<span class="w"> </span>project
-
-<span class="w">    </span>--download<span class="p">|</span>-d<span class="w"> </span><span class="o">[</span>arg<span class="o">]</span><span class="w">  </span>Download<span class="w"> </span>the<span class="w"> </span>project,<span class="w"> </span><span class="nv">arg</span><span class="o">=</span>git<span class="p">|</span>wget<span class="w"> </span>to<span class="w"> </span>download<span class="w"> </span>with<span class="w"> </span>git<span class="w"> </span>or<span class="w"> </span>wget<span class="w"> </span>respectively
-<span class="w">    </span>--verbose<span class="p">|</span>-v<span class="w">         </span>Output<span class="w"> </span>verbose<span class="w"> </span>mode<span class="w"> </span>activation
-
-install.sh<span class="w"> </span>--build<span class="p">|</span>-b<span class="w"> </span>&lt;arg&gt;<span class="w"> </span><span class="o">[</span>--verbose<span class="p">|</span>-v<span class="o">]</span>
-<span class="w">    </span>Build<span class="w"> </span>the<span class="w"> </span>project
-
-<span class="w">    </span>--build<span class="p">|</span>-b<span class="w"> </span><span class="o">[</span>arg<span class="o">]</span><span class="w">  </span>Build<span class="w"> </span>the<span class="w"> </span>project,<span class="w"> </span><span class="nv">arg</span><span class="o">=</span>fobis<span class="p">|</span>make<span class="p">|</span>cmake<span class="w"> </span>to<span class="w"> </span>build<span class="w"> </span>with<span class="w"> </span>FoBiS.py,<span class="w"> </span>GNU<span class="w"> </span>Make<span class="w"> </span>or<span class="w"> </span>CMake<span class="w"> </span>respectively
-<span class="w">    </span>--verbose<span class="p">|</span>-v<span class="w">      </span>Output<span class="w"> </span>verbose<span class="w"> </span>mode<span class="w"> </span>activation
-
-Examples:
-
-install.sh<span class="w"> </span>--download<span class="w"> </span>git
-install.sh<span class="w"> </span>--build<span class="w"> </span>make
-install.sh<span class="w"> </span>--download<span class="w"> </span>wget<span class="w"> </span>--build<span class="w"> </span>cmake
-</code></pre></div>
-
-<blockquote>
-<p>The script does not cover all possibilities.</p>
-</blockquote>
-<p>The script operation modes are 2 (<em>collapsible</em> into one-single-mode):</p>
-<ul>
-<li>download a new fresh-clone of the latest master-release by means of:</li>
-<li><a href="https://git-scm.com/">git</a>;</li>
-<li><a href="https://www.gnu.org/software/wget/">wget</a> (also <a href="https://curl.haxx.se/">curl</a> is necessary);</li>
-<li>build a fresh-clone project as static-linked library by means of:</li>
-<li><a href="https://github.com/szaghi/FoBiS">FoBiS.py</a>;</li>
-<li><a href="https://www.gnu.org/software/make/">GNU Make</a>;</li>
-<li><a href="https://cmake.org/">CMake</a>;</li>
-</ul>
-<blockquote>
-<p>you can mix any of the above combinations accordingly to the tools available.</p>
-</blockquote>
-<p>Typical usages are:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># download and prepare the project by means of git and build with GNU Make</span>
-install.sh<span class="w"> </span>--dowload<span class="w"> </span>git<span class="w"> </span>--build<span class="w"> </span>make
-<span class="c1"># download and prepare the project by means of wget (curl) and build with CMake</span>
-install.sh<span class="w"> </span>--dowload<span class="w"> </span>wget<span class="w"> </span>--build<span class="w"> </span>cmake
-<span class="c1"># download and prepare the project by means of git and build with FoBiS.py</span>
-install.sh<span class="w"> </span>--dowload<span class="w"> </span>git<span class="w"> </span>--build<span class="w"> </span>fobis
-</code></pre></div>
-
-<hr>
-<h3 id="manually-download-and-build">manually download and build</h3>
-<h4 id="download">download</h4>
-<p>To download all the available releases and utilities (fobos, license, readme, etc&hellip;), it can be convenient to <em>clone</em> whole the project:</p>
-<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/szaghi/FACE
-<span class="nb">cd</span><span class="w"> </span>FACE
-</code></pre></div>
-
-<p>Alternatively, you can directly download a release from GitHub server, see the <a href="https://github.com/szaghi/FACE/wiki/ChangeLog">ChangeLog</a>.</p>
-<h4 id="build">build</h4>
-<p>The most easy way to compile FACE is to use <a href="https://github.com/szaghi/FoBiS">FoBiS.py</a> within the provided fobos file.</p>
-<p>Consequently, it is strongly encouraged to install <a href="https://github.com/szaghi/FoBiS#install">FoBiS.py</a>.</p>
-<p>| <a href="#build-by-means-of-fobis">Build by means of FoBiS</a> | <a href="#build-by-means-of-gnu-make">Build by means of GNU Make</a> | <a href="#build-by-means-of-cmake">Build by means of CMake</a> |</p>
-<hr>
-<h4 id="build-by-means-of-fobis">build by means of FoBiS</h4>
-<p>FoBiS.py is a KISS tool for automatic building of modern Fortran projects. Providing very few options, FoBiS.py is able to build almost automatically complex Fortran projects with cumbersome inter-modules dependency. This removes the necessity to write complex makefile. Moreover, providing a very simple options file (in the FoBiS.py nomenclature indicated as <code>fobos</code> file) FoBiS.py can substitute the (ab)use of makefile for other project stuffs (build documentations, make project archive, etc&hellip;). FACE is shipped with a fobos file that can build the library in both <em>static</em> and <em>shared</em> forms and also build the <code>Test_Driver</code> program. The provided fobos file has several building modes.</p>
-<h5 id="listing-fobos-building-modes">listing fobos building modes</h5>
-<p>Typing:</p>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-lmodes
-</code></pre></div>
-
-<p>the following message should be printed:</p>
-<div class="codehilite"><pre><span></span><code>The<span class="w"> </span>fobos<span class="w"> </span>file<span class="w"> </span>defines<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>modes:
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-shared-gnu&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-static-gnu&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;tests-gnu&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-shared-gnu-debug&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-static-gnu-debug&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;tests-gnu-debug&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-shared-intel&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-static-intel&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;tests-intel&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-shared-intel-debug&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;face-static-intel-debug&quot;</span>
-<span class="w">  </span>-<span class="w"> </span><span class="s2">&quot;tests-intel-debug&quot;</span>
-</code></pre></div>
-
-<p>The modes should be self-explicative: <code>shared</code>, <code>static</code> and <code>test-driver</code> are the modes for building (in release, optimized form) the shared and static versions of the library and the Test Driver program, respectively. The other 3 modes are the same, but in debug form instead of release one. <code>-gnu</code> use the <code>GNU gfortran</code> compiler while <code>-intel</code> the Intel one.</p>
-<h5 id="building-the-library">building the library</h5>
-<p>The <code>shared</code> or <code>static</code> directories are created accordingly to the form of the library built. The compiled objects and mod files are placed inside this directory, as well as the linked library.</p>
-<h6 id="release-shared-library">release shared library</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>face-shared-gnu
-</code></pre></div>
-
-<h6 id="release-static-library">release static library</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>face-static-gnu
-</code></pre></div>
-
-<h6 id="debug-shared-library">debug shared library</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>face-shared-gnu-debug
-</code></pre></div>
-
-<h6 id="debug-static-library">debug static library</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>face-static-gnu-debug
-</code></pre></div>
-
-<h5 id="building-the-test-driver-program">building the Test Driver program</h5>
-<p>The <code>Test_Driver</code> directory is created. The compiled objects and mod files are placed inside this directory, as well as the linked program.</p>
-<h6 id="release-test-driver-program">release test driver program</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>tests-gnu
-</code></pre></div>
-
-<h6 id="debug-test-driver-program">debug test driver program</h6>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>build<span class="w"> </span>-mode<span class="w"> </span>tests-gnu-debug
-</code></pre></div>
-
-<h5 id="listing-fobos-rules">listing fobos rules</h5>
-<p>Typing:</p>
-<div class="codehilite"><pre><span></span><code>FoBiS.py<span class="w"> </span>rule<span class="w"> </span>-ls
-</code></pre></div>
-
-<p>the following message should be printed:</p>
-<div class="codehilite"><pre><span></span><code>The<span class="w"> </span>fobos<span class="w"> </span>file<span class="w"> </span>defines<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>rules:
-</code></pre></div>
-
-<p>The rules should be self-explicative.</p>
-<hr>
-<h4 id="build-by-means-of-gnu-make">build by means of GNU Make</h4>
-<p>To be implemented.</p>
-<h4 id="build-by-means-of-cmake">Build by means of CMake</h4>
-<p>To be implemented.</p>
-<p>Go to <a href="#top">Top</a></p>
+<p>Anyone interested in using, developing, or contributing to FACE is welcome — pick the license that best fits your needs.</p>
         </div>
           <div class="col-md-4">
             <div class="card card-body bg-light">
@@ -413,7 +238,7 @@ install.sh<span class="w"> </span>--dowload<span class="w"> </span>git<span clas
           <div class="col">
             <p>
               FACE
- was developed by Stefano Zaghi<br>              &copy; 2025 
+ was developed by Stefano Zaghi<br>              &copy; 2026 
 </p>
           </div>
           <div class="col">
