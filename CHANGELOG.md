@@ -1,8 +1,14 @@
+## [1.1.10] - 2026-02-17
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* Use ford.md and enable --mirror-sources --diagrams
 ## [1.1.9] - 2026-02-16
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(fix)* Clean/improve/sanitize CI GH actions
+- *(release)* V1.1.9
 ## [1.1.8] - 2026-02-16
 
 ### 📚 Documentation
