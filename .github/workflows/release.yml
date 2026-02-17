@@ -40,7 +40,7 @@ jobs:
     # ── Documentation ────────────────────────────────────────────────────────
     - name: Build documentation
       run: |
-        formal generate --project docs/main_page.md --output docs/api
+        formal generate --mirror-sources --diagrams --project docs/ford.md --output docs/api
         cd docs && npm ci && npm run docs:build
 
     - name: Deploy docs to GitHub Pages

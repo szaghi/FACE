@@ -12,8 +12,7 @@
 #   -n, --name NAME          Project name (default: current directory name)
 #   -a, --author AUTHOR      Author name (default: git config user.name)
 #   -f, --ford-file PATH     Existing FORD project file to reuse
-#                            (default: auto-detect doc/formal.md,
-#                             doc/vitepress.md, doc/main_page.md)
+#                            (default: auto-detect)
 #   -d, --docs-dir DIR       VitePress site output directory (default: docs)
 #   -r, --project-root DIR   Project root directory (default: .)
 #       --no-math            Disable LaTeX math support in VitePress
@@ -34,7 +33,7 @@
 #
 #   # Explicit options
 #   scripts/migrate_to_formal.sh --name MyLib --author "Jane Doe" \
-#     --ford-file docs/main_page.md --update-fobos --update-ci
+#     --ford-file docs/ford.md --update-fobos --update-ci
 #
 #   # Dry run to preview actions
 #   scripts/migrate_to_formal.sh --dry-run
@@ -131,7 +130,7 @@ fi
 
 # ── Auto-detect FORD project file ────────────────────────────────────────────
 if [[ -z "$FORD_FILE" ]]; then
-  for candidate in doc/formal.md doc/vitepress.md doc/main_page.md; do
+  for candidate in doc/formal.md doc/vitepress.md doc/main_page.md doc/ford.md; do
     if [[ -f "$candidate" ]]; then
       FORD_FILE="$candidate"
       info "FORD project file auto-detected: $FORD_FILE"
