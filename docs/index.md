@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Guide
-      link: /guide
+      link: /guide/
     - theme: alt
       text: API Reference
       link: /api/
@@ -27,6 +27,27 @@ features:
     title: Free & Open Source
     details: Multi-licensed — GPLv3 for FOSS projects, BSD 2/3-Clause or MIT for commercial use. Any contributor is welcome.
 ---
+
+## Quick start
+
+```fortran
+use face
+character(len=:), allocatable :: error_message
+
+error_message = colorize('error:', color_fg='red', style='underline_on')//' file not found!'
+
+print '(A)', error_message
+print '(A)', colorize('suggestion: check your configuration', color_fg='blue')
+
+call colors_samples ! print samples of all colors available
+call styles_samples ! print samples of all styles available
+```
+
+## Authors
+
+- Stefano Zaghi — [@szaghi](https://github.com/szaghi)
+
+Contributions are welcome — see the [Contributing](/guide/contributing) page.
 
 ## Copyrights
 

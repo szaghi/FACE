@@ -19,21 +19,40 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide' },
+      {
+        text: 'Guide',
+        items: [
+          { text: 'About', link: '/guide/' },
+          { text: 'Features', link: '/guide/features' },
+          { text: 'Installation', link: '/guide/install' },
+          { text: 'Usage', link: '/guide/usage' },
+          { text: 'Contributing', link: '/guide/contributing' },
+          { text: 'Changelog', link: '/guide/changelog' },
+        ],
+      },
       { text: 'API', link: '/api/' },
     ],
     sidebar: {
-      '/guide': [
+      '/guide/': [
         {
-          text: 'Guide',
+          text: 'Introduction',
           items: [
-            { text: 'What is FACE?', link: '/guide#what-is-face' },
-            { text: 'A taste of FACE', link: '/guide#a-taste-of-face' },
-            { text: 'Usage', link: '/guide#usage' },
-            { text: 'Available Colors and Styles', link: '/guide#available-colors-and-styles' },
-            { text: 'Install', link: '/guide#install' },
-            { text: 'Contributing & releasing', link: '/guide#contributing-releasing' },
-            { text: 'Copyrights', link: '/guide#copyrights' },
+            { text: 'About', link: '/guide/' },
+            { text: 'Features', link: '/guide/features' },
+          ],
+        },
+        {
+          text: 'Getting Started',
+          items: [
+            { text: 'Installation', link: '/guide/install' },
+            { text: 'Usage', link: '/guide/usage' },
+          ],
+        },
+        {
+          text: 'Project',
+          items: [
+            { text: 'Contributing', link: '/guide/contributing' },
+            { text: 'Changelog', link: '/guide/changelog' },
           ],
         },
       ],
