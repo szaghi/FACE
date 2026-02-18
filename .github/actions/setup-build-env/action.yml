@@ -1,4 +1,4 @@
-name: Setup FACE build environment
+name: Setup build environment
 description: Install GCC and Python build tools required by CI and release jobs
 
 inputs:

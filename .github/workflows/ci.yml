@@ -14,9 +14,11 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        submodules: 'true'
 
     - name: Setup build environment
-      uses: ./.github/actions/setup-face
+      uses: ./.github/actions/setup-build-env
 
     - name: Run tests with coverage
       run: FoBiS.py rule -ex makecoverage
