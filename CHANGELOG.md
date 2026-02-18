@@ -1,8 +1,14 @@
+## [1.1.11] - 2026-02-18
+
+### ⚙️ Miscellaneous Tasks
+
+- Rename setup-face action to setup-build-env and improve workflows
 ## [1.1.10] - 2026-02-17
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(release)* Use ford.md and enable --mirror-sources --diagrams
+- *(release)* V1.1.10
 ## [1.1.9] - 2026-02-16
 
 ### ⚙️ Miscellaneous Tasks
