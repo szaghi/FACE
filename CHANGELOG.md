@@ -1,8 +1,17 @@
+## [1.1.13] - 2026-02-28
+
+### ⚙️ Miscellaneous Tasks
+
+- Replace codecov with self-hosted badge and drop conda matrix
 ## [1.1.12] - 2026-02-18
 
 ### 📚 Documentation
 
 - Restructure guide into sectioned guide/ directory
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* V1.1.12
 ## [1.1.11] - 2026-02-18
 
 ### ⚙️ Miscellaneous Tasks
