@@ -1,3 +1,12 @@
+[project]
+name       = FACE
+version    = VERSION
+summary    = Fortran Ansi Colors (and Styles) Environment
+repository = https://github.com/szaghi/FACE
+website    = https://szaghi.github.io/FACE
+email      = stefano.zaghi@gmail.it
+authors    = Stefano Zaghi
+
 [modes]
 modes = tests-gnu tests-gnu-debug
         tests-intel tests-intel-debug

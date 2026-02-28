@@ -1,0 +1,30 @@
+name: Run coverage
+description: Run the test suite with coverage and extract the overall line percentage
+
+outputs:
+  pct:
+    description: Overall line coverage percentage (e.g. "87.3")
+    value: ${{ steps.cov.outputs.pct }}
+
+runs:
+  using: composite
+  steps:
+
+    - name: Run tests with coverage
+      shell: bash
+      run: FoBiS.py rule -ex makecoverage
+
+    - name: Extract coverage
+      id: cov
+      shell: bash
+      run: |
+        MODE=$(awk '/^\[rule-makecoverage\]/{f=1} f && /-mode /{for(i=1;i<=NF;i++) if($i=="-mode"){print $(i+1); exit}}' fobos)
+        BUILD_DIR=$(FoBiS.py rule -mode "${MODE}" -get build_dir)
+        OBJ_DIR=$(FoBiS.py rule -mode "${MODE}" -get obj_dir)
+        PCT=$(gcov "${BUILD_DIR}${OBJ_DIR#./}"*.gcda 2>/dev/null | \
+          awk '/^Lines executed:/{
+            match($0, /([0-9.]+)% of ([0-9]+)/, a)
+            total += a[2]; covered += a[1]/100 * a[2]
+          } END { if (total>0) printf "%.1f", covered/total*100; else print "0.0" }')
+        echo "pct=${PCT}" >> "$GITHUB_OUTPUT"
+        echo "## Test coverage: ${PCT}%" >> "$GITHUB_STEP_SUMMARY"
