@@ -1,8 +1,14 @@
+## [1.1.15] - 2026-02-28
+
+### 📚 Documentation
+
+- Replace CONTRIBUTING.md with symlink and fix FACE tarball name
 ## [1.1.14] - 2026-02-28
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(run-coverage)* Fix coverage extraction using find instead of FoBiS.py introspection
+- *(release)* V1.1.14
 ## [1.1.13] - 2026-02-28
 
 ### ⚙️ Miscellaneous Tasks
