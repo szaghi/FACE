@@ -1,8 +1,14 @@
+## [1.1.14] - 2026-02-28
+
+### ⚙️ Miscellaneous Tasks
+
+- *(run-coverage)* Fix coverage extraction using find instead of FoBiS.py introspection
 ## [1.1.13] - 2026-02-28
 
 ### ⚙️ Miscellaneous Tasks
 
 - Replace codecov with self-hosted badge and drop conda matrix
+- *(release)* V1.1.13
 ## [1.1.12] - 2026-02-18
 
 ### 📚 Documentation
