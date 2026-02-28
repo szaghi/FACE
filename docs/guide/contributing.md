@@ -98,5 +98,5 @@ scripts/bump.sh v2.1.0  # explicit version
 Pushing the tag triggers the GitHub Actions release workflow, which automatically:
 - Runs the full test suite and uploads coverage to Codecov
 - Builds this documentation site and deploys it to GitHub Pages
-- Packages a versioned tarball `PENF-vX.Y.Z.tar.gz`
+- Packages a versioned tarball `FACE-vX.Y.Z.tar.gz`
 - Publishes a GitHub release with the changelog section as release notes
