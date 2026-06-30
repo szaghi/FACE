@@ -1,61 +1,82 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Run the project test suite.
+#
+# Usage: run_tests.sh [--np N]
+#   -n, --np N   Ranks for MPI tests (default: 2).
+#
+# Execution by binary name:
+#   exe/*mpi*     — MPI test: run under `mpirun -np N` (N from --np, default 2).
+#   exe/*         — serial test: run directly.
+# A project with no *mpi* binaries therefore runs entirely serially, with or
+# without --np, so non-MPI projects need no flag.
+#
+# Classification by binary name (orthogonal to the MPI/serial split above):
+#   exe/*_xfail_*   — expected-failure test. MUST exit non-zero
+#                     (e.g. validates an `error stop` path). Exit 0 is treated
+#                     as a regression (XPASS, counted as failure).
+#   exe/*          — regular test. MUST exit 0.
+#
+# Output labels (autotools convention):
+#   PASS   regular test passed
+#   FAIL   regular test failed
+#   XFAIL  expected-failure test failed as expected (success)
+#   XPASS  expected-failure test passed unexpectedly (failure)
 
-all_passed () {
-  local array="$1[@]"
-  local ok=1
-  for element in "${!array}"; do
-    if [ "$element" == 'F' ]; then
-      ok=0
-      break
-    fi
-  done
-  echo $ok
-}
-
-declare -a tests_executed
-
-echo "Run non intentionally failing tests"
-for e in $( find ./exe/ -type f -executable -print | grep -v failure); do
-  is_passed=`$e | grep -i "Are all tests passed? " | awk '{print $5}'`
-  echo "  run test $e, is passed? $is_passed"
-  tests_executed=("${tests_executed[@]}" "$is_passed")
-  if [ "$is_passed" == 'F' ]; then
-    echo
-    echo "Test failed"
-    $e
-  fi
+NP=2
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --np | -n ) NP="$2"; shift 2 ;;
+    * ) printf "Unknown argument: %s\n" "$1" >&2; exit 2 ;;
+  esac
 done
-passed=$(all_passed tests_executed)
-if [ $passed -eq 1 ]; then
-  echo "All tests passed"
+
+if [[ -t 1 ]]; then
+  RED=$'\033[0;31m'; GREEN=$'\033[0;32m'; BOLD=$'\033[1m'; RESET=$'\033[0m'
 else
-  echo "Some tests failed"
-  exit 1
+  RED=''; GREEN=''; BOLD=''; RESET=''
 fi
-echo
-echo "Run intentionally failing tests"
-for e in $( find ./exe/ -type f -executable -print | grep failure); do
-  is_passed=`$e 2>/dev/null | grep -i "Are all tests passed? " | awk '{print $5}'`
-  if [ "$is_passed" == 'F' ]; then
-    is_passed='T';
+
+pass=0; fail=0
+tmpout=$(mktemp)
+trap 'rm -f "$tmpout"' EXIT
+
+shopt -s nullglob
+for exe in exe/*; do
+  [[ -f "$exe" && -x "$exe" ]] || continue
+  name=$(basename "$exe")
+
+  # MPI tests (name contains 'mpi') run under mpirun; everything else serial.
+  if [[ "$name" == *mpi* ]]; then
+    runner=(mpirun -np "$NP")
   else
-    is_passed='F';
+    runner=()
   fi
-  echo "  run test $e, is passed? $is_passed"
-  tests_executed=("${tests_executed[@]}" "$is_passed")
-  if [ "$is_passed" == 'F' ]; then
-    echo
-    echo "Test failed"
-    $e
+
+  "${runner[@]}" "$exe" > "$tmpout" 2>&1
+  rc=$?
+
+  if [[ "$name" == *_xfail_* ]]; then
+    # Expected-failure test: non-zero exit is success.
+    if [[ $rc -ne 0 ]]; then
+      printf "  ${GREEN}XFAIL${RESET} %s\n" "$name"
+      pass=$((pass + 1))
+    else
+      printf "  ${RED}XPASS${RESET} %s ${BOLD}(expected non-zero exit)${RESET}\n" "$name"
+      fail=$((fail + 1))
+    fi
+  else
+    # Regular test: zero exit is success.
+    if [[ $rc -eq 0 ]]; then
+      printf "  ${GREEN}PASS${RESET}  %s\n" "$name"
+      pass=$((pass + 1))
+    else
+      printf "  ${RED}FAIL${RESET}  %s\n" "$name"
+      sed 's/^/       /' "$tmpout"
+      fail=$((fail + 1))
+    fi
   fi
 done
-passed=$(all_passed tests_executed)
-if [ $passed -eq 1 ]; then
-  echo "All tests passed"
-else
-  echo "Some tests failed"
-  exit 1
-fi
-echo
-echo "Number of tests executed ${#tests_executed[@]}"
-exit 0
+
+total=$((pass + fail))
+printf "\n${BOLD}%d/%d passed${RESET}\n" "$pass" "$total"
+exit $fail
