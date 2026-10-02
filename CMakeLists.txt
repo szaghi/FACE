@@ -15,7 +15,10 @@
 # afterwards they can be run with ctest
 
 cmake_minimum_required(VERSION 3.14...3.15)
-project(FACE VERSION 1.1.1 LANGUAGES Fortran)
+# the version is read from the VERSION file (vX.Y.Z), updated by scripts/release.sh
+file(STRINGS "${CMAKE_CURRENT_LIST_DIR}/VERSION" face_version LIMIT_COUNT 1)
+string(REGEX REPLACE "^v" "" face_version "${face_version}")
+project(FACE VERSION ${face_version} LANGUAGES Fortran)
 
 # set export variables needed in subdirectories
 set(TARGETS_EXPORT_NAME "${PROJECT_NAME}-targets")
@@ -86,8 +89,8 @@ endif()
 
 # generate package config files
 include(GNUInstallDirs)
-set(project_config "${PROJECT_NAME}-config.cmake")
-set(project_config_version "${PROJECT_NAME}-config-version.cmake")
+set(project_config "${PROJECT_NAME}Config.cmake")
+set(project_config_version "${PROJECT_NAME}ConfigVersion.cmake")
 set(cmake_files_dir "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles")
 set(default_config_install_dir "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 set(config_build_dir "${CMAKE_CURRENT_BINARY_DIR}/${default_config_install_dir}")
