@@ -4,6 +4,17 @@ All notable changes to this project are documented here.
 Versions follow [Semantic Versioning](https://semver.org/).
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.1.17] — 2026-10-09
+### Added
+- **colorize**: Accept 24-bit #rrggbb colours for foreground and background
+
+
+### Fixed
+- **docs**: Target es2022 for vite build and sync fpm.toml on release
+
+- **ci**: Run install smoke test from the release workflow
+
+
 ## [1.1.16] — 2026-10-02
 ### Fixed
 - **coverage**: Drop broken redundant gcov from makecoverage rule
