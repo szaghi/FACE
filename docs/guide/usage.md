@@ -34,5 +34,6 @@ pure function colorize(string, color_fg, color_bg, style) result(colorized)
 end function colorize
 ```
 
-> Colors and style definitions are case **insensitive**. No warning is returned for
-> unrecognized values — the color or style is simply not applied.
+> Colors and style definitions are case **insensitive**. A color is a name or a 24-bit `#rrggbb`
+> value (see [Features](./features#available-colors-and-styles)). No warning is returned for
+> unrecognized values, a malformed `#rrggbb` included — the color or style is simply not applied.

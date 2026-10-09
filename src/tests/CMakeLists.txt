@@ -17,11 +17,17 @@ foreach(face_test
     face_test_colors.f90
     face_test_styles.f90
     face_test_ucs4.F90
+    face_test_hex.F90
 )
     add_face_test(${face_test} FACE)
 endforeach()
 
 target_compile_definitions(face_test_ucs4
+    PRIVATE
+        ${ucs4_supported}
+)
+
+target_compile_definitions(face_test_hex
     PRIVATE
         ${ucs4_supported}
 )

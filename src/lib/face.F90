@@ -37,6 +37,7 @@ integer, parameter :: UCS4  = selected_char_kind('default')   !< Unicode charact
 ! parameters
 character(26), parameter :: UPPER_ALPHABET='ABCDEFGHIJKLMNOPQRSTUVWXYZ' !< Upper case alphabet.
 character(26), parameter :: LOWER_ALPHABET='abcdefghijklmnopqrstuvwxyz' !< Lower case alphabet.
+character(16), parameter :: HEX_DIGITS='0123456789ABCDEF'          !< Hexadecimal digits.
 character(1),  parameter :: NL=new_line('a')                            !< New line character.
 character(1),  parameter :: ESCAPE=achar(27)                            !< "\" character.
 ! codes
@@ -143,22 +144,23 @@ contains
    character(len=*),             intent(in), optional :: style     !< Style definition.
    character(len=:, kind=ASCII), allocatable          :: colorized !< Colorized string.
    character(len=:, kind=ASCII), allocatable          :: buffer    !< Temporary buffer.
+   character(len=:),             allocatable          :: code      !< Colour code.
    integer(int32)                                     :: i         !< Counter.
 
    colorized = string
    if (present(color_fg)) then
-      i = color_index(upper(color_fg))
-      if (i>0) then
-         buffer = CODE_START//trim(COLORS_FG(2, i))//CODE_END
+      code = color_code(color_fg, background=.false.)
+      if (len(code)>0) then
+         buffer = CODE_START//code//CODE_END
          colorized = buffer//colorized
          buffer = CODE_CLEAR
          colorized = colorized//buffer
       endif
    endif
    if (present(color_bg)) then
-      i = color_index(upper(color_bg))
-      if (i>0) then
-         buffer = CODE_START//trim(COLORS_BG(2, i))//CODE_END
+      code = color_code(color_bg, background=.true.)
+      if (len(code)>0) then
+         buffer = CODE_START//code//CODE_END
          colorized = buffer//colorized
          buffer = CODE_CLEAR
          colorized = colorized//buffer
@@ -182,16 +184,17 @@ contains
    character(len=*), intent(in), optional :: color_bg  !< Background color definition.
    character(len=*), intent(in), optional :: style     !< Style definition.
    character(len=:), allocatable          :: colorized !< Colorized string.
+   character(len=:), allocatable          :: code      !< Colour code.
    integer(int32)                         :: i         !< Counter.
 
    colorized = string
    if (present(color_fg)) then
-      i = color_index(upper(color_fg))
-      if (i>0) colorized = CODE_START//trim(COLORS_FG(2, i))//CODE_END//colorized//CODE_CLEAR
+      code = color_code(color_fg, background=.false.)
+      if (len(code)>0) colorized = CODE_START//code//CODE_END//colorized//CODE_CLEAR
    endif
    if (present(color_bg)) then
-      i = color_index(upper(color_bg))
-      if (i>0) colorized = CODE_START//trim(COLORS_BG(2, i))//CODE_END//colorized//CODE_CLEAR
+      code = color_code(color_bg, background=.true.)
+      if (len(code)>0) colorized = CODE_START//code//CODE_END//colorized//CODE_CLEAR
    endif
    if (present(style)) then
       i = style_index(upper(style))
@@ -208,22 +211,23 @@ contains
    character(len=*),            intent(in), optional :: style     !< Style definition.
    character(len=:, kind=UCS4), allocatable          :: colorized !< Colorized string.
    character(len=:, kind=UCS4), allocatable          :: buffer    !< Temporary buffer.
+   character(len=:),            allocatable          :: code      !< Colour code.
    integer(int32)                                    :: i         !< Counter.
 
    colorized = string
    if (present(color_fg)) then
-      i = color_index(upper(color_fg))
-      if (i>0) then
-         buffer = CODE_START//trim(COLORS_FG(2, i))//CODE_END
+      code = color_code(color_fg, background=.false.)
+      if (len(code)>0) then
+         buffer = CODE_START//code//CODE_END
          colorized = buffer//colorized
          buffer = CODE_CLEAR
          colorized = colorized//buffer
       endif
    endif
    if (present(color_bg)) then
-      i = color_index(upper(color_bg))
-      if (i>0) then
-         buffer = CODE_START//trim(COLORS_BG(2, i))//CODE_END
+      code = color_code(color_bg, background=.true.)
+      if (len(code)>0) then
+         buffer = CODE_START//code//CODE_END
          colorized = buffer//colorized
          buffer = CODE_CLEAR
          colorized = colorized//buffer
@@ -240,6 +244,45 @@ contains
    endif
    endfunction colorize_ucs4
 #endif
+   pure function color_code(color, background) result(code)
+   !< Return the SGR parameters of a colour: a name of the colors lists, or "#rrggbb" (24-bit, any case); empty if unknown.
+   character(len=*), intent(in)  :: color      !< Color definition.
+   logical,          intent(in)  :: background !< Background color, foreground otherwise.
+   character(len=:), allocatable :: code       !< SGR parameters, e.g. "31" or "38;2;46;245;192".
+   character(len=:), allocatable :: hex        !< Trimmed, upper case definition.
+   character(len=3)              :: channel    !< A channel, as text.
+   integer(int32)                :: rgb(3)     !< Channels.
+   integer(int32)                :: hi         !< High hexadecimal digit of a channel.
+   integer(int32)                :: lo         !< Low hexadecimal digit of a channel.
+   integer(int32)                :: c          !< Counter.
+
+   code = ''
+   c = color_index(upper(color))
+   if (c>0) then
+      if (background) then
+         code = trim(COLORS_BG(2, c))
+      else
+         code = trim(COLORS_FG(2, c))
+      endif
+      return
+   endif
+   hex = upper(trim(adjustl(color)))
+   if (len(hex)/=7) return
+   if (hex(1:1)/='#') return
+   do c=1, 3
+      hi = index(HEX_DIGITS, hex(2*c:2*c)) - 1
+      lo = index(HEX_DIGITS, hex(2*c+1:2*c+1)) - 1
+      if (hi<0.or.lo<0) return
+      rgb(c) = 16 * hi + lo
+   enddo
+   code = '38;2'
+   if (background) code = '48;2'
+   do c=1, 3
+      write(channel, '(I0)') rgb(c)
+      code = code//';'//trim(channel)
+   enddo
+   endfunction color_code
+
    elemental function color_index(color)
    !< Return the array-index corresponding to the queried color.
    !<

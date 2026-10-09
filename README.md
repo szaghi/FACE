@@ -8,7 +8,7 @@
 [![CI](https://github.com/szaghi/FACE/actions/workflows/ci.yml/badge.svg)](https://github.com/szaghi/FACE/actions/workflows/ci.yml)
 [![coverage](https://img.shields.io/endpoint?url=https://szaghi.github.io/FACE/coverage.json)](https://github.com/szaghi/FACE/actions/workflows/ci.yml)
 
-| 🎨 **Single Function API**<br>`colorize(string, color_fg, color_bg, style)` — one call does it all | 🌈 **Rich Color Support**<br>Named colors, 256-color palette, and RGB — foreground and background | ✨ **Text Styles**<br>Bold, italic, underline, blink, and more standard ANSI styles | 🔤 **Unicode Ready**<br>Optional UCS4/UTF-8 character kind support via preprocessor |
+| 🎨 **Single Function API**<br>`colorize(string, color_fg, color_bg, style)` — one call does it all | 🌈 **Rich Color Support**<br>Named colors and 24-bit RGB (`#rrggbb`) — foreground and background | ✨ **Text Styles**<br>Bold, italic, underline, blink, and more standard ANSI styles | 🔤 **Unicode Ready**<br>Optional UCS4/UTF-8 character kind support via preprocessor |
 |:---:|:---:|:---:|:---:|
 | ⚡ **Pure Fortran 2008+**<br>No C, no external deps — tested with gfortran, ifx, lfortran, flang-new, nvfortran | 🔓 **Multi-licensed**<br>GPL v3 · BSD 2/3-Clause · MIT | 📦 **Multiple build systems**<br>fpm, FoBiS.py, CMake | 📖 **Documented & Tested**<br>API reference + full test suite for colors and styles |
 
@@ -77,9 +77,18 @@ pure function colorize(string, color_fg, color_bg, style) result(colorized)
 end function colorize
 ```
 
-> Colors and style definitions are case **insensitive**. No warning is returned for unrecognized values — the color or style is simply not applied.
+> Colors and style definitions are case **insensitive**. No warning is returned for unrecognized values (including a malformed `#rrggbb`) — the color or style is simply not applied.
 
 ## Available Colors and Styles
+
+A color is either one of the names below (`red`, `green_intense`, ...) or a 24-bit RGB value
+`#rrggbb`, written as the SGR sequence `ESC[38;2;r;g;bm` (foreground) or `ESC[48;2;r;g;bm`
+(background). Most modern terminals support 24-bit color; a terminal that does not may show
+an approximation or ignore it.
+
+```fortran
+print '(A)', colorize('188', color_fg='#2EF5C0')//colorize(' km/h', color_fg='#FFB000', color_bg='#101010')
+```
 
 ![samples](docs/samples.png)
 

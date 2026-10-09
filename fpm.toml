@@ -38,3 +38,8 @@ main = "face_test_styles.f90"
 name = "face_test_ucs4"
 source-dir = "src/tests"
 main = "face_test_ucs4.F90"
+
+[[test]]
+name = "face_test_hex"
+source-dir = "src/tests"
+main = "face_test_hex.F90"
