@@ -56,9 +56,16 @@ The test `face_test_ucs4.F90` (capital `.F90`) is preprocessed; lowercase `.f90`
 
 ## CI
 
-- `.github/workflows/ci.yml` — builds, tests coverage (gcov), generates Ford docs, deploys to GitHub Pages
-- `.github/workflows/ci-conda.yml` — matrix testing across Linux/macOS/Windows with gfortran, ifx, lfortran, flang-new, nvfortran (both fpm and cmake)
-- `.github/workflows/install.yml` — tests cmake install script and fpm build
+All workflows come from the FoBiS scaffold (`fobis scaffold status` / `sync`).
+
+- `.github/workflows/ci.yml` — tests and coverage (gcov), uploads the coverage outputs for the docs
+- `.github/workflows/docs.yml` — builds the VitePress site with the coverage of the CI run, deploys to GitHub Pages
+- `.github/workflows/install.yml` — install smoke tests (install script, CMake, fpm), run from the release workflow
+- `.github/workflows/release.yml` — GitHub release on a version tag
+
+`ci.yml` and the build job of `docs.yml` run in the container `ghcr.io/szaghi/fortran-toolchains:gnu-16.2` (repo
+`~/fortran/fortran-toolchains`: gfortran 16.2, Open MPI 5.0.11, FoBiS, formal), set by `[scaffold] toolchain_image` in
+`fobos`; `install.yml` runs on the bare runner (`setup-build-env`), as does `release.yml`.
 
 ## Documentation
 

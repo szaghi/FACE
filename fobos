@@ -7,6 +7,9 @@ website    = https://szaghi.github.io/FACE
 email      = stefano.zaghi@gmail.it
 authors    = Stefano Zaghi
 
+[scaffold]
+toolchain_image = ghcr.io/szaghi/fortran-toolchains:gnu-16.2
+
 [modes]
 modes = tests-gnu tests-gnu-debug
         tests-intel tests-intel-debug
