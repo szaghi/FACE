@@ -4,6 +4,18 @@ import apiSidebar from '../api/_sidebar.json'
 export default defineConfig({
   base: '/FACE/',
   title: 'FACE Documentation',
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/FACE/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/FACE/favicon-32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/FACE/favicon-16.png' }],
+    ['link', { rel: 'alternate icon', href: '/FACE/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/FACE/apple-touch-icon.png' }],
+    ['meta', { name: 'theme-color', content: '#f3ede1', media: '(prefers-color-scheme: light)' }],
+    ['meta', { name: 'theme-color', content: '#0e1116', media: '(prefers-color-scheme: dark)' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap' }],
+  ],
   markdown: {
     math: true,
     languages: ['fortran-free-form', 'fortran-fixed-form'],
@@ -17,6 +29,8 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    logo: { light: '/logo-nav.svg', dark: '/logo-nav-dark.svg', alt: 'FACE' },
+    siteTitle: 'FACE',
     nav: [
       { text: 'Home', link: '/' },
       {

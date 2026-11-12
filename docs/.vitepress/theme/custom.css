@@ -1,0 +1,126 @@
+/* FACE · Inretsu 印列 in Iwa-enogu 岩絵具 · the Sumi family theme for VitePress
+   Washi (light) and silver ink (dark). One mineral pigment per ANSI code, in the order
+   colors_samples prints them; the family seal and the brand colour in shu (vermilion).
+   Contrast, checked: text ≥ 13:1, secondary text ≥ 5.3:1, links ≥ 5.2:1 on washi
+   (sidebar included) and ≥ 7.7:1 in silver ink, button text ≥ 6.6:1. */
+
+:root {
+  --face-ground: #f3ede1;
+  --face-ground-alt: #ebe3d3;
+  --face-ground-raised: #f7f2e8;
+  --face-line: #ddd4c3;
+  --face-ink: #1d1b18;
+  --face-ink-muted: #5f5a52;
+  --face-mesh: #6f6a62;
+  --face-seal: #c23a22;
+  --face-link: #a9321d;
+  --face-action: #a9321d;
+  --face-action-pressed: #87281a;
+  --face-on-action: #ffffff;
+  --face-focus-ring: #1d1b18;
+  /* the pigments: 31 shu, 32 moegi, 33 ōdo, 34 gunjō, 35 botan, 36 rokushō */
+  --face-pigment-1: #c23a22;
+  --face-pigment-2: #6f8a12;
+  --face-pigment-3: #a97808;
+  --face-pigment-4: #2a6fb5;
+  --face-pigment-5: #c22f72;
+  --face-pigment-6: #1f8a80;
+}
+
+.dark {
+  --face-ground: #0e1116;
+  --face-ground-alt: #0a0d11;
+  --face-ground-raised: #141820;
+  --face-line: #222831;
+  --face-ink: #e8ecf0;
+  --face-ink-muted: #a9b1bb;
+  --face-mesh: #8b949e;
+  --face-seal: #ff8a70;
+  --face-link: #ff8a70;
+  --face-action: #ff8a70;
+  --face-action-pressed: #e8664c;
+  --face-on-action: #1a0a06;
+  --face-focus-ring: #ff8a70;
+  --face-pigment-1: #ff8a70;
+  --face-pigment-2: #b5cc4a;
+  --face-pigment-3: #e8b53e;
+  --face-pigment-4: #7fb0ff;
+  --face-pigment-5: #f27fb2;
+  --face-pigment-6: #5fd0c2;
+}
+
+:root, .dark {
+  --vp-font-family-base: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --vp-c-bg: var(--face-ground);
+  --vp-c-bg-alt: var(--face-ground-alt);
+  --vp-c-bg-elv: var(--face-ground-raised);
+  --vp-c-bg-soft: var(--face-ground-raised);
+  --vp-c-text-1: var(--face-ink);
+  --vp-c-text-2: var(--face-ink-muted);
+  --vp-c-text-3: var(--face-ink-muted);
+  --vp-c-divider: var(--face-line);
+  --vp-c-gutter: var(--face-line);
+  --vp-c-border: var(--face-mesh);
+
+  --vp-c-brand-1: var(--face-link);
+  --vp-c-brand-2: var(--face-action-pressed);
+  --vp-c-brand-3: var(--face-action);
+  --vp-c-brand-soft: color-mix(in srgb, var(--face-seal) 14%, transparent);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-bg: var(--face-action);
+  --vp-button-brand-text: var(--face-on-action);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-bg: var(--face-action-pressed);
+  --vp-button-brand-hover-text: var(--face-on-action);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-bg: var(--face-action-pressed);
+  --vp-button-brand-active-text: var(--face-on-action);
+  --vp-button-alt-bg: var(--face-ground-raised);
+  --vp-button-alt-border: var(--face-mesh);
+  --vp-button-alt-text: var(--face-ink);
+  --vp-button-alt-hover-bg: var(--face-ground-alt);
+  --vp-button-alt-hover-border: var(--face-ink-muted);
+  --vp-button-alt-hover-text: var(--face-ink);
+
+  --vp-code-block-bg: var(--face-ground-alt);
+  --vp-code-bg: var(--face-ground-alt);
+  --vp-code-color: var(--face-ink);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+
+  --vp-nav-bg-color: var(--face-ground);
+  --vp-sidebar-bg-color: var(--face-ground-alt);
+  --vp-local-nav-bg-color: var(--face-ground);
+
+  /* the ink carries the mark: no glow, no gradient behind it */
+  --vp-home-hero-name-color: var(--face-ink);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+}
+
+/* the name, always in capitals, in Shippori Mincho 800 */
+.VPHero .name,
+.VPNavBarTitle .title {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.VPNavBarTitle .title { letter-spacing: 0.05em; }
+.VPNavBarTitle .logo { height: 28px; }
+
+/* the logo carries its own ground: give it room, never a backdrop */
+.VPHero .image-src { max-width: 320px; max-height: 320px; }
+@media (min-width: 960px) { .VPHero .image-src { max-width: 400px; max-height: 400px; } }
+
+/* feature cards: washi raised, icons at the size they were drawn for */
+.VPFeature { border: 1px solid var(--face-line); }
+.VPFeature .icon { background-color: transparent; width: 48px; height: 48px; }
+
+/* focus: a solid 2 px ring with a 2 px gap of ground */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--face-focus-ring);
+  outline-offset: 2px;
+}

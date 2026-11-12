@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/public/logo-dark.svg">
+    <img src="docs/public/logo.svg" alt="FACE" width="200">
+  </picture>
+</p>
+
 # FACE
 
 >#### Fortran Ansi Colors and Styles Environment
