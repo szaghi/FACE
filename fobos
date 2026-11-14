@@ -8,7 +8,7 @@ email      = stefano.zaghi@gmail.it
 authors    = Stefano Zaghi
 
 [scaffold]
-toolchain_image = ghcr.io/szaghi/fortran-toolchains:gnu-16.2
+toolchain = linux-gnu
 
 [modes]
 modes = tests-gnu tests-gnu-debug
