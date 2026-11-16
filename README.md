@@ -152,12 +152,17 @@ make              # static library
 make TESTS=yes    # build and run tests
 ```
 
-### Install script
+### One-line install
 
-FACE ships a bash script (`install.sh`, downloadable from the [latest release](https://github.com/szaghi/FACE/releases/latest)) that automates download and build:
-
-```shell
-install.sh --download git --build cmake
+```bash
+curl -fsSL https://github.com/szaghi/FACE/releases/latest/download/install.sh | bash
 ```
 
-Supported download methods: `git`, `wget`. Supported build systems: `fobis`, `make`, `cmake`.
+It installs the latest release into `~/.local` with the build system you choose among those FACE ships
+(`--build fobis|fpm|cmake`: a menu asks when you do not say), the compiler you name (`--fc`, `--gnu`, `--intel`,
+`--nvidia`), one install per compiler (`lib/face/<compiler>-<version>/`, `include/face/<compiler>-<version>/`), and
+makes it usable through pkg-config (`pkg-config --cflags --libs face`, with `PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig`).
+Pass options after `bash -s --`, e.g. `... | bash -s -- --build cmake --intel --prefix /opt/face`; `--help` lists them
+all, `--uninstall` removes the install. The installer is FoBiS's
+([One-line installer](https://szaghi.github.io/FoBiS/cookbook/installer)).
+

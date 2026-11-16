@@ -10,6 +10,11 @@ authors    = Stefano Zaghi
 [scaffold]
 toolchain = linux-gnu
 
+# the one-line installer, scripts/install.sh (FoBiS#217): FACE's static modes for the fobis build
+[installer]
+mode_gnu   = face-static-gnu
+mode_intel = face-static-intel
+
 [modes]
 modes = tests-gnu tests-gnu-debug
         tests-intel tests-intel-debug
